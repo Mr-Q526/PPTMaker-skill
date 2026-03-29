@@ -90,7 +90,7 @@ function main() {
     archetype: archetypeName,
     deck: "deck.json",
     preview: "preview.html",
-    output: "output.pptx",
+    output: `${path.basename(projectDir)}.pptx`,
     notes: "brief.md"
   };
 

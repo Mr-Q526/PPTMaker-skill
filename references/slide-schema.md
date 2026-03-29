@@ -183,6 +183,7 @@
 
 - `rect`
 - `roundedRect`
+- `circle`
 
 ### `table`
 

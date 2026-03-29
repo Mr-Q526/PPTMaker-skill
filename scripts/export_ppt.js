@@ -72,24 +72,28 @@ function addImage(slide, component, deckPath) {
 
 function addDivider(slide, component, theme) {
   const style = component.style || {};
+  const fillColor = style.backgroundColor || style.fill || style.color || null;
   slide.addShape("rect", {
     x: component.x,
     y: component.y,
     w: component.w,
     h: component.h,
     line: {
-      color: toPptHex(style.backgroundColor, toPptHex(theme.dividerColor)),
+      color: toPptHex(fillColor, toPptHex(theme.dividerColor)),
       transparency: 100
     },
     fill: {
-      color: toPptHex(style.backgroundColor, toPptHex(theme.dividerColor))
+      color: toPptHex(fillColor, toPptHex(theme.dividerColor))
     }
   });
 }
 
 function addShape(slide, component, theme) {
   const style = component.style || {};
-  const shapeType = component.shape === "roundedRect" ? "roundRect" : "rect";
+  const fillColor = style.backgroundColor || style.fill || null;
+  const shapeType = component.shape === "circle" ? "ellipse" : component.shape === "roundedRect" ? "roundRect" : "rect";
+  const opacityPercent = style.opacity !== undefined ? Math.round(style.opacity * 100) : 100;
+  const transparency = 100 - opacityPercent;
 
   slide.addShape(shapeType, {
     x: component.x,
@@ -98,10 +102,12 @@ function addShape(slide, component, theme) {
     h: component.h,
     line: {
       color: toPptHex(style.borderColor, toPptHex(theme.dividerColor)),
-      pt: 1
+      pt: 1,
+      transparency: transparency
     },
     fill: {
-      color: toPptHex(style.backgroundColor, toPptHex(theme.surfaceColor))
+      color: toPptHex(fillColor, toPptHex(theme.surfaceColor)),
+      transparency: transparency
     }
   });
 }

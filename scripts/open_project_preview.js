@@ -17,7 +17,8 @@ function main() {
   const projectDir = path.resolve(projectArg);
   const deckPath = path.join(projectDir, "deck.json");
   const previewPath = path.join(projectDir, "preview.html");
-  const outputPath = path.join(projectDir, "output.pptx");
+  const projectSlug = path.basename(projectDir);
+  const outputPath = path.join(projectDir, `${projectSlug}.pptx`);
 
   runScript("validate_deck.js", [deckPath]);
 

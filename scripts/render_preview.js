@@ -178,10 +178,11 @@ function renderBulletList(component, slide, slideIndex, scope) {
 
 function renderDivider(component, slide, slideIndex, scope) {
   const style = component.style || {};
+  const bgColor = style.backgroundColor || style.fill || style.color || "";
   const presentation = componentPresentation(component, slide, slideIndex, scope);
   const styles = joinStyles([
     componentBoxStyle(component),
-    style.backgroundColor ? `background:${style.backgroundColor}` : "",
+    bgColor ? `background:${bgColor}` : "",
     "border-radius:999px",
     ...presentation.styleTokens
   ]);
@@ -213,12 +214,19 @@ function renderQuote(component, slide, slideIndex, scope) {
 
 function renderShape(component, slide, slideIndex, scope) {
   const style = component.style || {};
+  const bgColor = style.backgroundColor || style.fill || "";
+  const opacityPercent = style.opacity !== undefined ? Math.round(style.opacity * 100) : 100;
   const presentation = componentPresentation(component, slide, slideIndex, scope);
+  
+  const backgroundStyle = bgColor ? `background:color-mix(in srgb, ${bgColor} ${opacityPercent}%, transparent)` : "";
+  const borderStyle = style.borderColor ? `border:1px solid color-mix(in srgb, ${style.borderColor} ${opacityPercent}%, transparent)` : "";
+  const borderRadius = component.shape === "circle" ? "border-radius:50%" : component.shape === "roundedRect" ? "border-radius:18px" : "";
+
   const styles = joinStyles([
     componentBoxStyle(component),
-    style.backgroundColor ? `background:${style.backgroundColor}` : "",
-    style.borderColor ? `border:1px solid ${style.borderColor}` : "",
-    component.shape === "roundedRect" ? "border-radius:18px" : "",
+    backgroundStyle,
+    borderStyle,
+    borderRadius,
     ...presentation.styleTokens
   ]);
 
@@ -363,7 +371,7 @@ function main() {
   const outputPath = path.resolve(outputArg);
   const projectDir = path.dirname(deckPath);
   const projectSlug = path.basename(projectDir);
-  const outputPptPath = path.join(projectDir, "output.pptx");
+  const outputPptPath = path.join(projectDir, `${projectSlug}.pptx`);
   const outputPptHref = pathToFileURL(outputPptPath).href;
   const deck = readJson(deckPath);
   const theme = resolveTheme(deck.meta.theme);
@@ -414,90 +422,22 @@ ${css}
 
     <section class="viewer-main">
       <header class="viewer-toolbar">
-        <div class="viewer-toolbar-copy">
-          <div class="viewer-toolbar-topline">
-            <span class="viewer-page-chip" id="currentPageChip">第 1 / ${deck.slides.length} 页</span>
-            <span class="viewer-info-chip" id="currentStageSummary">共 ${(deck.slides[0].components || []).length} 个区块</span>
-          </div>
-          <h2 id="currentSlideTitle">${escapeHtml(deck.slides[0].label || displaySlideType(deck.slides[0].type))}</h2>
-          <p id="currentSlideMeta">点击区块后自动复制识别信息，按左右方向键可以切页。</p>
+        <div class="viewer-toolbar-left">
+          <span class="viewer-page-chip" id="currentPageChip">第 1 / ${deck.slides.length} 页</span>
+          <span class="viewer-slide-name" id="currentSlideTitle">${escapeHtml(deck.slides[0].label || displaySlideType(deck.slides[0].type))}</span>
         </div>
         <div class="viewer-toolbar-actions">
-          <button type="button" class="viewer-action" id="prevSlideButton">上一页</button>
-          <button type="button" class="viewer-action" id="nextSlideButton">下一页</button>
-          <button type="button" class="viewer-action" id="replayButton">重播动画</button>
-          <a class="viewer-action viewer-action--primary" href="${escapeHtml(outputPptHref)}">打开项目里的 PPT</a>
+          <button type="button" class="viewer-action" id="prevSlideButton">◀</button>
+          <button type="button" class="viewer-action" id="nextSlideButton">▶</button>
+          <button type="button" class="viewer-action" id="replayButton">↻</button>
+          <a class="viewer-action viewer-action--primary" href="${escapeHtml(outputPptHref)}">导出 PPT</a>
         </div>
       </header>
 
       <section class="viewer-stage-wrap">
-        <div class="viewer-stage-frame">
+        <div class="viewer-stage-frame" id="stageFrame">
           ${stageSlides}
         </div>
-
-        <section class="viewer-inspector">
-          <article class="inspector-card">
-            <span class="inspector-label">当前页面</span>
-            <h3 id="inspectorSlideTitle">${escapeHtml(deck.slides[0].label || displaySlideType(deck.slides[0].type))}</h3>
-            <p id="inspectorSlideMeta">${escapeHtml(displaySlideType(deck.slides[0].type))}</p>
-            <div class="inspector-grid inspector-grid--simple">
-              <div>
-                <span class="inspector-key">页码</span>
-                <strong id="inspectorSlidePage">第 1 / ${deck.slides.length} 页</strong>
-              </div>
-              <div>
-                <span class="inspector-key">区块数</span>
-                <strong id="inspectorSlideBlocks">${(deck.slides[0].components || []).length}</strong>
-              </div>
-              <div>
-                <span class="inspector-key">动画分步</span>
-                <strong id="inspectorSlideBuilds">${getBuildStages(deck.slides[0].components || []).length}</strong>
-              </div>
-            </div>
-          </article>
-
-          <article class="inspector-card inspector-card--detail">
-            <span class="inspector-label">当前区块</span>
-            <div id="componentInspectorEmpty" class="inspector-empty">
-              将鼠标移到页面区块上查看信息，点击后会自动复制识别信息，方便直接告诉 AI 要修改哪一块。
-            </div>
-            <div id="componentInspectorDetail" class="inspector-detail" hidden>
-              <div class="inspector-detail-head">
-                <div>
-                  <h3 id="componentTitle">区块</h3>
-                  <p id="componentMeta">类型 · 角色</p>
-                </div>
-                <span class="inspector-pin" id="componentPinState">悬停中</span>
-              </div>
-              <div class="inspector-tags">
-                <div>
-                  <span class="inspector-key">组件 ID</span>
-                  <strong id="componentIdValue"></strong>
-                </div>
-                <div>
-                  <span class="inspector-key">所在页</span>
-                  <strong id="componentSlideValue"></strong>
-                </div>
-                <div>
-                  <span class="inspector-key">位置尺寸</span>
-                  <strong id="componentFrameValue"></strong>
-                </div>
-                <div>
-                  <span class="inspector-key">动画</span>
-                  <strong id="componentAnimationValue"></strong>
-                </div>
-              </div>
-              <div class="component-preview-copy">
-                <span class="inspector-key">内容预览</span>
-                <p id="componentPreviewValue"></p>
-              </div>
-              <div class="prompt-card">
-                <span class="inspector-key">推荐指令</span>
-                <code id="componentPromptValue"></code>
-              </div>
-            </div>
-          </article>
-        </section>
       </section>
     </section>
   </main>
@@ -513,25 +453,8 @@ ${css}
       const nextButton = document.getElementById("nextSlideButton");
       const replayButton = document.getElementById("replayButton");
       const currentPageChip = document.getElementById("currentPageChip");
-      const currentStageSummary = document.getElementById("currentStageSummary");
       const currentSlideTitle = document.getElementById("currentSlideTitle");
-      const currentSlideMeta = document.getElementById("currentSlideMeta");
-      const inspectorSlideTitle = document.getElementById("inspectorSlideTitle");
-      const inspectorSlideMeta = document.getElementById("inspectorSlideMeta");
-      const inspectorSlidePage = document.getElementById("inspectorSlidePage");
-      const inspectorSlideBlocks = document.getElementById("inspectorSlideBlocks");
-      const inspectorSlideBuilds = document.getElementById("inspectorSlideBuilds");
-      const componentInspectorEmpty = document.getElementById("componentInspectorEmpty");
-      const componentInspectorDetail = document.getElementById("componentInspectorDetail");
-      const componentTitle = document.getElementById("componentTitle");
-      const componentMeta = document.getElementById("componentMeta");
-      const componentIdValue = document.getElementById("componentIdValue");
-      const componentSlideValue = document.getElementById("componentSlideValue");
-      const componentFrameValue = document.getElementById("componentFrameValue");
-      const componentAnimationValue = document.getElementById("componentAnimationValue");
-      const componentPreviewValue = document.getElementById("componentPreviewValue");
-      const componentPromptValue = document.getElementById("componentPromptValue");
-      const componentPinState = document.getElementById("componentPinState");
+      const stageFrame = document.getElementById("stageFrame");
       const tooltip = document.getElementById("componentTooltip");
       const copyToast = document.getElementById("copyToast");
 
@@ -631,27 +554,7 @@ ${css}
         tooltip.hidden = true;
       }
 
-      function refreshInspector() {
-        const element = pinnedElement || hoveredElement;
-        if (!element) {
-          componentInspectorEmpty.hidden = false;
-          componentInspectorDetail.hidden = true;
-          return;
-        }
-
-        const data = element.dataset;
-        componentInspectorEmpty.hidden = true;
-        componentInspectorDetail.hidden = false;
-        componentTitle.textContent = data.componentLabel || data.componentId;
-        componentMeta.textContent = [data.componentTypeLabel || data.componentType, data.componentRole, data.componentAliases].filter(Boolean).join(" · ");
-        componentIdValue.textContent = data.componentId;
-        componentSlideValue.textContent = pageLabelFromData(data);
-        componentFrameValue.textContent = data.componentFrame;
-        componentAnimationValue.textContent = data.componentEffect ? data.componentEffectLabel + " · 第 " + data.componentBuild + " 步" : "无";
-        componentPreviewValue.textContent = data.componentPreview || "无内容预览";
-        componentPromptValue.textContent = promptSuggestion(data);
-        componentPinState.textContent = pinnedElement ? "已复制" : "悬停中";
-      }
+      function refreshInspector() {}
 
       function clearComponentState() {
         if (hoveredElement) {
@@ -674,16 +577,23 @@ ${css}
 
         const page = activeIndex + 1;
         currentPageChip.textContent = "第 " + page + " / " + stageSlides.length + " 页";
-        currentStageSummary.textContent = "共 " + (Number(stage.dataset.slideComponentCount) || 0) + " 个区块";
         currentSlideTitle.textContent = stage.dataset.slideLabel;
-        currentSlideMeta.textContent = "点击区块后自动复制识别信息，按左右方向键可以切页。";
-        inspectorSlideTitle.textContent = stage.dataset.slideLabel;
-        inspectorSlideMeta.textContent = stage.dataset.slideTypeLabel || stage.dataset.slideType;
-        inspectorSlidePage.textContent = "第 " + page + " / " + stageSlides.length + " 页";
-        inspectorSlideBlocks.textContent = stage.dataset.slideComponentCount;
-        inspectorSlideBuilds.textContent = stage.dataset.slideBuildCount;
         prevButton.disabled = activeIndex === 0;
         nextButton.disabled = activeIndex === stageSlides.length - 1;
+      }
+
+      function scaleStage() {
+        const frame = stageFrame;
+        if (!frame) return;
+        const activeSlide = frame.querySelector(".stage-slide.is-active .slide");
+        if (!activeSlide) return;
+        const availW = frame.clientWidth - 44;
+        const availH = frame.clientHeight - 44;
+        const slideW = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--deck-width"));
+        const slideH = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--deck-height"));
+        const scale = Math.min(availW / slideW, availH / slideH, 1);
+        activeSlide.style.transform = "scale(" + scale + ")";
+        activeSlide.style.transformOrigin = "top center";
       }
 
       function showFinalBuildState() {
@@ -735,6 +645,7 @@ ${css}
         });
         clearComponentState();
         updateSlideInfo();
+        scaleStage();
         requestAnimationFrame(() => {
           if (options.replay === false) {
             showFinalBuildState();
@@ -839,6 +750,8 @@ ${css}
         });
 
         setActiveSlide(0, { instant: true });
+        scaleStage();
+        window.addEventListener("resize", scaleStage);
       });
     })();
   </script>

@@ -69,7 +69,7 @@ const componentSchema = {
     },
     shape: {
       type: "string",
-      enum: ["rect", "roundedRect"]
+      enum: ["rect", "roundedRect", "circle"]
     },
     animation: {
       type: "object",
