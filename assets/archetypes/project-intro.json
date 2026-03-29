@@ -1,0 +1,220 @@
+{
+  "id": "project-intro",
+  "label": "项目介绍",
+  "description": "适合项目背景、价值、方案、进度和下一步规划。",
+  "briefSections": ["项目一句话定义", "背景与痛点", "目标用户", "核心方案", "关键里程碑", "需要展示的素材"],
+  "starterDeck": {
+    "meta": {
+      "mode": "editable"
+    },
+    "slides": [
+      {
+        "id": "slide-01",
+        "label": "封面",
+        "type": "cover",
+        "components": [
+          {
+            "id": "s01-title",
+            "label": "项目标题",
+            "type": "title",
+            "text": "{{title}}",
+            "x": 0.9,
+            "y": 0.85,
+            "w": 6.2,
+            "h": 0.8,
+            "style": {
+              "fontSize": 30,
+              "bold": true
+            }
+          },
+          {
+            "id": "s01-subtitle",
+            "label": "项目定位",
+            "type": "subtitle",
+            "text": "一页讲清项目定位、价值和当前进展。",
+            "x": 0.95,
+            "y": 1.75,
+            "w": 6.4,
+            "h": 0.45,
+            "style": {
+              "fontSize": 16,
+              "color": "#475569"
+            }
+          },
+          {
+            "id": "s01-visual",
+            "label": "项目封面图",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "contain",
+            "x": 7.9,
+            "y": 1.05,
+            "w": 4.15,
+            "h": 3.75
+          }
+        ]
+      },
+      {
+        "id": "slide-02",
+        "label": "项目背景",
+        "type": "title-bullets",
+        "components": [
+          {
+            "id": "s02-title",
+            "label": "背景标题",
+            "type": "title",
+            "text": "项目背景与目标",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 5.7,
+            "h": 0.6,
+            "style": {
+              "fontSize": 25,
+              "bold": true
+            }
+          },
+          {
+            "id": "s02-bullets",
+            "label": "背景要点",
+            "type": "bullet-list",
+            "items": ["背景是什么", "为什么现在要做", "这次希望解决什么问题"],
+            "x": 0.95,
+            "y": 1.8,
+            "w": 5.3,
+            "h": 3.2,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s02-note",
+            "label": "背景补充",
+            "type": "text",
+            "text": "可以在这里补充用户规模、行业变化或业务挑战。",
+            "x": 6.95,
+            "y": 1.85,
+            "w": 4.45,
+            "h": 1.4,
+            "style": {
+              "fontSize": 18,
+              "color": "#334155"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-03",
+        "label": "方案结构",
+        "type": "two-column",
+        "components": [
+          {
+            "id": "s03-title",
+            "label": "方案标题",
+            "type": "title",
+            "text": "解决方案与结构",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 6.0,
+            "h": 0.6,
+            "style": {
+              "fontSize": 25,
+              "bold": true
+            }
+          },
+          {
+            "id": "s03-left",
+            "label": "方案说明",
+            "type": "bullet-list",
+            "items": ["模块 A", "模块 B", "模块 C"],
+            "x": 0.95,
+            "y": 1.9,
+            "w": 5.25,
+            "h": 3.4,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s03-right",
+            "label": "方案示意图",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "contain",
+            "x": 7.0,
+            "y": 1.72,
+            "w": 4.3,
+            "h": 3.55
+          }
+        ]
+      },
+      {
+        "id": "slide-04",
+        "label": "里程碑",
+        "type": "timeline",
+        "components": [
+          {
+            "id": "s04-title",
+            "label": "里程碑标题",
+            "type": "title",
+            "text": "关键里程碑",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 4.8,
+            "h": 0.6,
+            "style": {
+              "fontSize": 25,
+              "bold": true
+            }
+          },
+          {
+            "id": "s04-timeline",
+            "label": "里程碑列表",
+            "type": "bullet-list",
+            "items": ["阶段 1：立项", "阶段 2：试点", "阶段 3：推广", "阶段 4：规模化"],
+            "x": 1.1,
+            "y": 1.85,
+            "w": 10.2,
+            "h": 3.6,
+            "style": {
+              "fontSize": 18
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-05",
+        "label": "下一步",
+        "type": "quote",
+        "components": [
+          {
+            "id": "s05-title",
+            "label": "下一步标题",
+            "type": "title",
+            "text": "下一步与协作需求",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 6.2,
+            "h": 0.6,
+            "style": {
+              "fontSize": 25,
+              "bold": true
+            }
+          },
+          {
+            "id": "s05-quote",
+            "label": "下一步说明",
+            "type": "quote-block",
+            "text": "下一阶段要做什么，需要谁支持，成功标准是什么。",
+            "x": 1.0,
+            "y": 2.05,
+            "w": 10.2,
+            "h": 1.4,
+            "style": {
+              "fontSize": 24
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

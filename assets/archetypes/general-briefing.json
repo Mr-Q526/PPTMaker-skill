@@ -1,0 +1,227 @@
+{
+  "id": "general-briefing",
+  "label": "通用汇报",
+  "description": "一句话主题到完整 deck 的默认脚手架。",
+  "briefSections": ["目标", "受众", "关键信息", "需要强调的数据", "希望保留的风格"],
+  "starterDeck": {
+    "meta": {
+      "mode": "editable"
+    },
+    "slides": [
+      {
+        "id": "slide-01",
+        "label": "封面",
+        "type": "cover",
+        "components": [
+          {
+            "id": "s01-title",
+            "label": "封面标题",
+            "role": "title-primary",
+            "type": "title",
+            "text": "{{title}}",
+            "x": 0.9,
+            "y": 0.9,
+            "w": 6.2,
+            "h": 0.8,
+            "style": {
+              "fontSize": 30,
+              "bold": true,
+              "color": "#0F172A"
+            }
+          },
+          {
+            "id": "s01-subtitle",
+            "label": "封面副标题",
+            "role": "title-secondary",
+            "type": "subtitle",
+            "text": "用结构化 deck 快速完成 {{archetypeLabel}}。",
+            "x": 0.9,
+            "y": 1.8,
+            "w": 6.4,
+            "h": 0.45,
+            "style": {
+              "fontSize": 16,
+              "color": "#475569"
+            }
+          },
+          {
+            "id": "s01-visual",
+            "label": "封面主视觉",
+            "role": "hero-image",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "contain",
+            "x": 8.0,
+            "y": 1.1,
+            "w": 4.2,
+            "h": 3.8
+          }
+        ]
+      },
+      {
+        "id": "slide-02",
+        "label": "目录",
+        "type": "agenda",
+        "components": [
+          {
+            "id": "s02-title",
+            "label": "目录标题",
+            "type": "title",
+            "text": "内容结构",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 4.2,
+            "h": 0.6,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s02-agenda",
+            "label": "目录列表",
+            "type": "bullet-list",
+            "items": ["背景与目标", "核心内容", "数据或证据", "结论与下一步"],
+            "x": 0.95,
+            "y": 1.75,
+            "w": 5.0,
+            "h": 3.4,
+            "style": {
+              "fontSize": 18,
+              "color": "#111827"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-03",
+        "label": "核心信息",
+        "type": "title-bullets",
+        "components": [
+          {
+            "id": "s03-title",
+            "label": "核心信息标题",
+            "type": "title",
+            "text": "核心信息",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 5.6,
+            "h": 0.6,
+            "style": {
+              "fontSize": 24,
+              "bold": true
+            }
+          },
+          {
+            "id": "s03-bullets",
+            "label": "核心信息列表",
+            "type": "bullet-list",
+            "items": ["要点 1", "要点 2", "要点 3"],
+            "x": 0.95,
+            "y": 1.8,
+            "w": 5.3,
+            "h": 3.2,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s03-note",
+            "label": "解释说明",
+            "type": "text",
+            "text": "这里可以补一句总结或补充说明。",
+            "x": 6.95,
+            "y": 1.85,
+            "w": 4.4,
+            "h": 1.4,
+            "style": {
+              "fontSize": 18,
+              "color": "#334155"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-04",
+        "label": "图文说明",
+        "type": "image-text",
+        "components": [
+          {
+            "id": "s04-title",
+            "label": "图文页标题",
+            "type": "title",
+            "text": "图文说明",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 6.0,
+            "h": 0.6,
+            "style": {
+              "fontSize": 24,
+              "bold": true
+            }
+          },
+          {
+            "id": "s04-text",
+            "label": "图文页正文",
+            "type": "text",
+            "text": "在这里补充故事线、案例或方案描述。",
+            "x": 0.95,
+            "y": 1.85,
+            "w": 5.0,
+            "h": 2.2,
+            "style": {
+              "fontSize": 18,
+              "color": "#334155"
+            }
+          },
+          {
+            "id": "s04-image",
+            "label": "图文页图片",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "contain",
+            "x": 7.05,
+            "y": 1.55,
+            "w": 4.3,
+            "h": 3.6
+          }
+        ]
+      },
+      {
+        "id": "slide-05",
+        "label": "结论与下一步",
+        "type": "quote",
+        "components": [
+          {
+            "id": "s05-title",
+            "label": "结论标题",
+            "type": "title",
+            "text": "结论与下一步",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 5.8,
+            "h": 0.6,
+            "style": {
+              "fontSize": 24,
+              "bold": true
+            }
+          },
+          {
+            "id": "s05-quote",
+            "label": "总结金句",
+            "type": "quote-block",
+            "text": "一句话总结这份 PPT 想让听众记住的核心观点。",
+            "x": 1.0,
+            "y": 2.0,
+            "w": 10.5,
+            "h": 1.6,
+            "style": {
+              "fontSize": 24,
+              "color": "#0F172A"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

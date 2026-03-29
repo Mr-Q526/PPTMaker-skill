@@ -1,0 +1,12 @@
+{
+  "name": "openclaw-signal",
+  "fontFamilySans": "Aptos",
+  "fontFamilyDisplay": "Aptos Display",
+  "backgroundColor": "#07111F",
+  "surfaceColor": "#0B172A",
+  "textColor": "#E6F0FF",
+  "mutedTextColor": "#9BB4D1",
+  "accentColor": "#39C6FF",
+  "dividerColor": "#18314C"
+}
+

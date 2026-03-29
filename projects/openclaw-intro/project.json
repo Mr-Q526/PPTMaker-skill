@@ -1,0 +1,15 @@
+{
+  "name": "OpenClaw 介绍",
+  "slug": "openclaw-intro",
+  "createdAt": "2026-03-29T00:00:00.000Z",
+  "deck": "deck.json",
+  "preview": "preview.html",
+  "output": "output.pptx",
+  "notes": "brief.md",
+  "sources": [
+    "/Users/minruiqing/MyProjects/My skills/xiaohongshu-ops-skill-main/Openclaw一键安装.md",
+    "/Users/minruiqing/MyProjects/My skills/xiaohongshu-ops-skill-main/README.md",
+    "/Users/minruiqing/MyProjects/My skills/Publish-All/README.md"
+  ]
+}
+

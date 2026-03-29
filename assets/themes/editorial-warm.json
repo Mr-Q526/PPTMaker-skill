@@ -1,0 +1,12 @@
+{
+  "name": "editorial-warm",
+  "fontFamilySans": "Georgia",
+  "fontFamilyDisplay": "Georgia",
+  "backgroundColor": "#FCF7F0",
+  "surfaceColor": "#FFFDF9",
+  "textColor": "#2B2118",
+  "mutedTextColor": "#6B5C4F",
+  "accentColor": "#B45309",
+  "dividerColor": "#E7D8C5"
+}
+

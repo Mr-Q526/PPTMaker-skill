@@ -1,0 +1,11 @@
+{
+  "name": "executive-dark",
+  "fontFamilySans": "Aptos",
+  "fontFamilyDisplay": "Aptos Display",
+  "backgroundColor": "#0F172A",
+  "surfaceColor": "#111827",
+  "textColor": "#F8FAFC",
+  "mutedTextColor": "#CBD5E1",
+  "accentColor": "#60A5FA",
+  "dividerColor": "#334155"
+}

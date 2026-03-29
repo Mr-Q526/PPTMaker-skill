@@ -1,0 +1,9 @@
+interface:
+  display_name: "PPT Maker"
+  short_description: "Generate structured PPT decks with preview and PPTX export."
+  brand_color: "#1E40AF"
+  default_prompt: "Use $ppt-maker to turn my topic or draft into a structured PPT deck with preview and editable PPTX export."
+
+policy:
+  allow_implicit_invocation: true
+

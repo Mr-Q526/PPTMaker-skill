@@ -1,0 +1,19 @@
+{
+  "id": "profile-editorial",
+  "label": "人物杂志风",
+  "description": "适合个人介绍、嘉宾简介、作品集和创作者档案。",
+  "theme": "editorial-warm",
+  "layoutVariants": {
+    "cover": "editorial-cover",
+    "agenda": "story-map",
+    "section": "chapter-break",
+    "title-bullets": "portrait-notes",
+    "two-column": "profile-split",
+    "image-text": "caption-photo",
+    "comparison": "before-after-cards",
+    "timeline": "career-strip",
+    "table": "folio-grid",
+    "chart": "narrative-chart",
+    "quote": "signature-quote"
+  }
+}

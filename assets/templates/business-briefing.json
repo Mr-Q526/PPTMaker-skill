@@ -1,0 +1,19 @@
+{
+  "id": "business-briefing",
+  "label": "商务汇报",
+  "description": "适合项目介绍、方案汇报、管理层沟通和经营汇总。",
+  "theme": "business-clean",
+  "layoutVariants": {
+    "cover": "hero-left",
+    "agenda": "agenda-columns",
+    "section": "contrast-band",
+    "title-bullets": "evidence-split",
+    "two-column": "narrative-split",
+    "image-text": "media-right-focus",
+    "comparison": "card-contrast",
+    "timeline": "milestone-ribbon",
+    "table": "executive-grid",
+    "chart": "headline-data",
+    "quote": "pull-quote"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "id": "personal-intro",
+  "label": "个人介绍",
+  "description": "适合个人介绍、嘉宾页、求职陈述和作品集简介。",
+  "briefSections": ["你的身份定位", "希望观众记住的三件事", "代表经历", "代表项目", "个性化素材或照片"],
+  "starterDeck": {
+    "meta": {
+      "mode": "editable"
+    },
+    "slides": [
+      {
+        "id": "slide-01",
+        "label": "封面",
+        "type": "cover",
+        "components": [
+          {
+            "id": "s01-title",
+            "label": "姓名与标题",
+            "type": "title",
+            "text": "{{title}}",
+            "x": 0.95,
+            "y": 0.9,
+            "w": 6.0,
+            "h": 0.8,
+            "style": {
+              "fontSize": 30,
+              "bold": true
+            }
+          },
+          {
+            "id": "s01-subtitle",
+            "label": "定位说明",
+            "type": "subtitle",
+            "text": "一句话描述你的身份、方向或擅长的事情。",
+            "x": 0.95,
+            "y": 1.8,
+            "w": 6.4,
+            "h": 0.45,
+            "style": {
+              "fontSize": 16,
+              "color": "#6B7280"
+            }
+          },
+          {
+            "id": "s01-photo",
+            "label": "人物照片",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "cover",
+            "x": 8.0,
+            "y": 1.0,
+            "w": 3.8,
+            "h": 4.2
+          }
+        ]
+      },
+      {
+        "id": "slide-02",
+        "label": "个人标签",
+        "type": "title-bullets",
+        "components": [
+          {
+            "id": "s02-title",
+            "label": "标签标题",
+            "type": "title",
+            "text": "我是谁",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 4.0,
+            "h": 0.6,
+            "style": {
+              "fontSize": 25,
+              "bold": true
+            }
+          },
+          {
+            "id": "s02-bullets",
+            "label": "标签列表",
+            "type": "bullet-list",
+            "items": ["身份标签 1", "身份标签 2", "身份标签 3"],
+            "x": 0.95,
+            "y": 1.8,
+            "w": 5.1,
+            "h": 3.2,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s02-text",
+            "label": "补充说明",
+            "type": "text",
+            "text": "这里可以补充你的工作方式、价值观或风格。",
+            "x": 6.95,
+            "y": 1.9,
+            "w": 4.3,
+            "h": 1.45,
+            "style": {
+              "fontSize": 18,
+              "color": "#334155"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-03",
+        "label": "经历概览",
+        "type": "timeline",
+        "components": [
+          {
+            "id": "s03-title",
+            "label": "经历标题",
+            "type": "title",
+            "text": "经历概览",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 4.8,
+            "h": 0.6,
+            "style": {
+              "fontSize": 25,
+              "bold": true
+            }
+          },
+          {
+            "id": "s03-timeline",
+            "label": "经历时间线",
+            "type": "bullet-list",
+            "items": ["阶段 1：起点", "阶段 2：成长", "阶段 3：代表节点", "阶段 4：当前方向"],
+            "x": 1.0,
+            "y": 1.8,
+            "w": 10.1,
+            "h": 3.5,
+            "style": {
+              "fontSize": 18
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-04",
+        "label": "代表项目",
+        "type": "two-column",
+        "components": [
+          {
+            "id": "s04-title",
+            "label": "项目标题",
+            "type": "title",
+            "text": "代表项目",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 4.8,
+            "h": 0.6,
+            "style": {
+              "fontSize": 25,
+              "bold": true
+            }
+          },
+          {
+            "id": "s04-left",
+            "label": "项目说明",
+            "type": "bullet-list",
+            "items": ["做了什么", "为什么重要", "带来了什么结果"],
+            "x": 0.95,
+            "y": 1.9,
+            "w": 5.15,
+            "h": 3.35,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s04-right",
+            "label": "项目图片",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "contain",
+            "x": 7.0,
+            "y": 1.75,
+            "w": 4.2,
+            "h": 3.5
+          }
+        ]
+      },
+      {
+        "id": "slide-05",
+        "label": "结尾",
+        "type": "quote",
+        "components": [
+          {
+            "id": "s05-title",
+            "label": "结尾标题",
+            "type": "title",
+            "text": "我希望被这样记住",
+            "x": 0.9,
+            "y": 0.72,
+            "w": 6.2,
+            "h": 0.6,
+            "style": {
+              "fontSize": 25,
+              "bold": true
+            }
+          },
+          {
+            "id": "s05-quote",
+            "label": "结尾金句",
+            "type": "quote-block",
+            "text": "用一句话总结你的独特价值、方向或合作方式。",
+            "x": 1.0,
+            "y": 2.05,
+            "w": 10.2,
+            "h": 1.5,
+            "style": {
+              "fontSize": 24
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

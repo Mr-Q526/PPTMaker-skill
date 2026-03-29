@@ -1,0 +1,19 @@
+{
+  "id": "launch-stage",
+  "label": "发布会风",
+  "description": "适合产品发布、功能亮点展示、品牌叙事和产品介绍。",
+  "theme": "openclaw-signal",
+  "layoutVariants": {
+    "cover": "hero-right",
+    "agenda": "agenda-cards",
+    "section": "statement-break",
+    "title-bullets": "headline-plus-visual",
+    "two-column": "spotlight-split",
+    "image-text": "immersive-figure",
+    "comparison": "statement-versus",
+    "timeline": "step-cards",
+    "table": "minimal-grid",
+    "chart": "spotlight-chart",
+    "quote": "manifesto-quote"
+  }
+}

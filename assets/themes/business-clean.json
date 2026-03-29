@@ -1,0 +1,12 @@
+{
+  "name": "business-clean",
+  "fontFamilySans": "Aptos",
+  "fontFamilyDisplay": "Aptos Display",
+  "backgroundColor": "#F8FAFC",
+  "surfaceColor": "#FFFFFF",
+  "textColor": "#0F172A",
+  "mutedTextColor": "#475569",
+  "accentColor": "#1D4ED8",
+  "dividerColor": "#CBD5E1"
+}
+

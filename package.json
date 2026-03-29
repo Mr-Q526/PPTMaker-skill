@@ -1,0 +1,24 @@
+{
+  "name": "ppt-maker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local toolchain for deck.json to preview HTML and PPTX export.",
+  "type": "commonjs",
+  "scripts": {
+    "validate": "node scripts/validate_deck.js samples/example-deck.json",
+    "preview": "node scripts/render_preview.js samples/example-deck.json outputs/example-preview.html",
+    "export": "node scripts/export_ppt.js samples/example-deck.json outputs/example-output.pptx",
+    "edit": "node scripts/apply_edit.js samples/example-deck.json samples/example-edits.json outputs/example-edited-deck.json",
+    "plan:command": "node scripts/plan_edit.js samples/example-deck.json \"把第二页右侧正文左移一点\" outputs/example-command-plan.json",
+    "command": "node scripts/edit_with_command.js samples/example-deck.json \"把第二页右侧正文左移一点\" outputs/example-command-deck.json outputs/example-command-plan.json",
+    "project:new": "node scripts/init_project.js demo-project \"Demo Project\"",
+    "project:build": "node scripts/build_project.js projects/demo-project",
+    "project:open": "node scripts/open_project_preview.js projects/demo-project",
+    "catalog": "node scripts/list_catalog.js",
+    "skill:new": "node scripts/create_ppt_skill.js demo-scene \"Demo Scene\""
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "pptxgenjs": "^4.0.1"
+  }
+}

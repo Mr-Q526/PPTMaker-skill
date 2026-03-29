@@ -1,0 +1,24 @@
+{
+  "operations": [
+    {
+      "type": "replace-text",
+      "componentId": "s02-title",
+      "text": "Updated Workflow"
+    },
+    {
+      "type": "move-component",
+      "componentId": "s02-card",
+      "x": 7.0,
+      "y": 1.25,
+      "w": 5.3,
+      "h": 3.85
+    },
+    {
+      "type": "set-style",
+      "componentId": "s01-title",
+      "style": {
+        "color": "#1D4ED8"
+      }
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "slideTypes": {
+    "cover": [
+      {
+        "id": "hero-left",
+        "label": "左文右图",
+        "description": "标题和副标题在左，右侧放主视觉或产品图。"
+      },
+      {
+        "id": "hero-right",
+        "label": "右文左图",
+        "description": "更适合产品发布或截图展示。"
+      },
+      {
+        "id": "editorial-cover",
+        "label": "杂志封面",
+        "description": "大标题压图，适合个人介绍或品牌故事。"
+      }
+    ],
+    "agenda": [
+      {
+        "id": "agenda-columns",
+        "label": "双列目录",
+        "description": "适合标准汇报结构。"
+      },
+      {
+        "id": "agenda-cards",
+        "label": "卡片目录",
+        "description": "更偏发布会或产品展示。"
+      },
+      {
+        "id": "story-map",
+        "label": "叙事地图",
+        "description": "用阶段或主题组织内容。"
+      }
+    ],
+    "section": [
+      {
+        "id": "contrast-band",
+        "label": "对比章节页",
+        "description": "强调章节转场和主题切换。"
+      },
+      {
+        "id": "statement-break",
+        "label": "观点章节页",
+        "description": "适合用一句强结论承接后文。"
+      },
+      {
+        "id": "chapter-break",
+        "label": "章节扉页",
+        "description": "适合人物/故事型文稿。"
+      }
+    ],
+    "title-bullets": [
+      {
+        "id": "evidence-split",
+        "label": "标题证据分栏",
+        "description": "上方标题，下方左侧观点右侧证据。"
+      },
+      {
+        "id": "headline-plus-visual",
+        "label": "标题加主视觉",
+        "description": "减少文字，放大视觉表达。"
+      },
+      {
+        "id": "portrait-notes",
+        "label": "人物注释页",
+        "description": "更适合个人介绍和优势总结。"
+      }
+    ],
+    "two-column": [
+      {
+        "id": "narrative-split",
+        "label": "叙事双栏",
+        "description": "左文字右图片或图表。"
+      },
+      {
+        "id": "spotlight-split",
+        "label": "聚焦双栏",
+        "description": "更适合产品截图和功能亮点。"
+      },
+      {
+        "id": "profile-split",
+        "label": "人物双栏",
+        "description": "左人物信息右案例或头像。"
+      }
+    ],
+    "image-text": [
+      {
+        "id": "media-right-focus",
+        "label": "右图说明",
+        "description": "常规说明图文结构。"
+      },
+      {
+        "id": "immersive-figure",
+        "label": "沉浸式图文",
+        "description": "大图优先，文字做注释。"
+      },
+      {
+        "id": "caption-photo",
+        "label": "图片说明页",
+        "description": "适合作品集和人物介绍。"
+      }
+    ],
+    "comparison": [
+      {
+        "id": "card-contrast",
+        "label": "卡片对比",
+        "description": "适合优势、方案、前后差异对比。"
+      },
+      {
+        "id": "statement-versus",
+        "label": "观点对照",
+        "description": "适合发布会风的强对比表达。"
+      },
+      {
+        "id": "before-after-cards",
+        "label": "前后对照卡",
+        "description": "适合人物成长、项目复盘。"
+      }
+    ],
+    "timeline": [
+      {
+        "id": "milestone-ribbon",
+        "label": "里程碑轴",
+        "description": "适合项目节点、路线图。"
+      },
+      {
+        "id": "step-cards",
+        "label": "步骤卡片",
+        "description": "适合产品流程、落地步骤。"
+      },
+      {
+        "id": "career-strip",
+        "label": "经历时间线",
+        "description": "适合个人履历。"
+      }
+    ],
+    "table": [
+      {
+        "id": "executive-grid",
+        "label": "管理层表格",
+        "description": "强调清晰和可读性。"
+      },
+      {
+        "id": "minimal-grid",
+        "label": "极简表格",
+        "description": "减少边框感，适合发布会风。"
+      },
+      {
+        "id": "folio-grid",
+        "label": "作品集表格",
+        "description": "更柔和，适合人物/项目档案。"
+      }
+    ],
+    "chart": [
+      {
+        "id": "headline-data",
+        "label": "大结论图表",
+        "description": "标题先给结论，图表做支撑。"
+      },
+      {
+        "id": "spotlight-chart",
+        "label": "舞台图表",
+        "description": "更适合产品演讲风格。"
+      },
+      {
+        "id": "narrative-chart",
+        "label": "叙事图表",
+        "description": "适合讲述成长和变化。"
+      }
+    ],
+    "quote": [
+      {
+        "id": "pull-quote",
+        "label": "金句页",
+        "description": "适合总结观点或客户引言。"
+      },
+      {
+        "id": "manifesto-quote",
+        "label": "宣言页",
+        "description": "适合发布会和品牌故事。"
+      },
+      {
+        "id": "signature-quote",
+        "label": "人物签名页",
+        "description": "适合作为个人介绍结尾。"
+      }
+    ]
+  }
+}

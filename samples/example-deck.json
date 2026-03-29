@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "title": "AI Product Overview",
+    "theme": "business-clean",
+    "ratio": "16:9",
+    "mode": "editable"
+  },
+  "slides": [
+    {
+      "id": "slide-01",
+      "label": "封面",
+      "type": "cover",
+      "components": [
+        {
+          "id": "s01-title",
+          "label": "封面标题",
+          "role": "title-primary",
+          "aliases": ["主标题"],
+          "type": "title",
+          "text": "AI Product Overview",
+          "x": 0.9,
+          "y": 0.9,
+          "w": 8.0,
+          "h": 0.8,
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "#0F172A"
+          }
+        },
+        {
+          "id": "s01-subtitle",
+          "label": "封面副标题",
+          "role": "title-secondary",
+          "type": "subtitle",
+          "text": "From topic to outline, preview, and editable PPTX",
+          "x": 0.9,
+          "y": 1.8,
+          "w": 7.6,
+          "h": 0.45,
+          "style": {
+            "fontSize": 16,
+            "color": "#475569"
+          }
+        },
+        {
+          "id": "s01-divider",
+          "label": "封面分割线",
+          "type": "divider",
+          "x": 0.9,
+          "y": 2.45,
+          "w": 1.5,
+          "h": 0.08,
+          "style": {
+            "backgroundColor": "#1D4ED8"
+          }
+        },
+        {
+          "id": "s01-quote",
+          "label": "封面引言",
+          "role": "supporting-copy",
+          "type": "quote-block",
+          "text": "Build decks from natural language, then revise specific components instead of redrawing every slide.",
+          "x": 0.9,
+          "y": 3.0,
+          "w": 5.2,
+          "h": 1.5,
+          "style": {
+            "fontSize": 18,
+            "color": "#0F172A"
+          }
+        },
+        {
+          "id": "s01-image",
+          "label": "封面配图",
+          "role": "hero-visual",
+          "aliases": ["右侧图片"],
+          "type": "image",
+          "src": "../assets/preview/placeholder-graphic.svg",
+          "x": 8.2,
+          "y": 1.2,
+          "w": 4.0,
+          "h": 3.5
+        }
+      ]
+    },
+    {
+      "id": "slide-02",
+      "label": "流程页",
+      "type": "title-bullets",
+      "components": [
+        {
+          "id": "s02-title",
+          "label": "流程标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "Core Workflow",
+          "x": 0.9,
+          "y": 0.75,
+          "w": 5.5,
+          "h": 0.7,
+          "style": {
+            "fontSize": 26,
+            "bold": true
+          }
+        },
+        {
+          "id": "s02-bullets",
+          "label": "流程要点",
+          "role": "body-left",
+          "type": "bullet-list",
+          "items": [
+            "Turn a topic or source content into an outline.",
+            "Generate slide-level components with stable ids.",
+            "Preview the same deck data before export.",
+            "Apply edits to individual boxes and layouts."
+          ],
+          "x": 0.9,
+          "y": 1.75,
+          "w": 5.6,
+          "h": 3.1,
+          "style": {
+            "fontSize": 18,
+            "color": "#0F172A"
+          }
+        },
+        {
+          "id": "s02-card",
+          "label": "右侧信息卡",
+          "role": "body-right-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 7.2,
+          "y": 1.35,
+          "w": 5.1,
+          "h": 3.7,
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#CBD5E1"
+          }
+        },
+        {
+          "id": "s02-text",
+          "label": "右侧正文",
+          "role": "body-right",
+          "aliases": ["第二页右侧正文", "右边正文"],
+          "type": "text",
+          "text": "Use deck.json as the single source of truth so preview and PPT export stay aligned.",
+          "x": 7.6,
+          "y": 1.8,
+          "w": 4.2,
+          "h": 1.9,
+          "style": {
+            "fontSize": 18,
+            "color": "#0F172A",
+            "lineHeight": "1.5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-03",
+      "label": "范围页",
+      "type": "table",
+      "components": [
+        {
+          "id": "s03-title",
+          "label": "范围标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "MVP Scope",
+          "x": 0.9,
+          "y": 0.75,
+          "w": 4.5,
+          "h": 0.6,
+          "style": {
+            "fontSize": 26,
+            "bold": true
+          }
+        },
+        {
+          "id": "s03-table",
+          "label": "范围表格",
+          "role": "data-table",
+          "type": "table",
+          "x": 0.9,
+          "y": 1.7,
+          "w": 6.5,
+          "h": 3.3,
+          "rows": [
+            ["Capability", "Status", "Notes"],
+            ["Outline generation", "Now", "Topic or markdown input"],
+            ["HTML preview", "Now", "Fixed 16:9 preview canvas"],
+            ["Editable PPTX export", "Now", "Based on PptxGenJS"],
+            ["Natural language edits", "Next", "Map user intent to structured operations"]
+          ]
+        },
+        {
+          "id": "s03-chart",
+          "label": "进度图表",
+          "role": "data-chart",
+          "aliases": ["右侧图表"],
+          "type": "chart",
+          "kind": "bar",
+          "text": "Delivery Progress",
+          "categories": ["Schema", "Preview", "Export"],
+          "series": [
+            {
+              "name": "Completion",
+              "values": [80, 70, 60]
+            }
+          ],
+          "x": 7.8,
+          "y": 1.7,
+          "w": 4.5,
+          "h": 3.3
+        }
+      ]
+    }
+  ]
+}

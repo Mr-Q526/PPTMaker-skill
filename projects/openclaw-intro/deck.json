@@ -1,0 +1,1336 @@
+{
+  "meta": {
+    "title": "OpenClaw 介绍",
+    "theme": "openclaw-signal",
+    "ratio": "16:9",
+    "mode": "editable"
+  },
+  "slides": [
+    {
+      "id": "slide-01",
+      "label": "封面",
+      "type": "cover",
+      "components": [
+        {
+          "id": "s01-bg",
+          "label": "封面背景",
+          "role": "background",
+          "type": "image",
+          "src": "./assets/bg-cover.svg",
+          "x": 0,
+          "y": 0,
+          "w": 13.333,
+          "h": 7.5
+        },
+        {
+          "id": "s01-chip-bg",
+          "label": "标签底板",
+          "role": "eyebrow-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 0.86,
+          "w": 2.15,
+          "h": 0.4,
+          "style": {
+            "backgroundColor": "#0E213B",
+            "borderColor": "#39C6FF"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 1,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s01-chip",
+          "label": "标签文字",
+          "role": "eyebrow",
+          "type": "subtitle",
+          "text": "AI Automation Runtime",
+          "x": 1.18,
+          "y": 0.96,
+          "w": 1.72,
+          "h": 0.18,
+          "style": {
+            "fontSize": 13,
+            "color": "#7FDBFF",
+            "bold": true
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 1,
+            "durationMs": 460,
+            "delayMs": 240
+          }
+        },
+        {
+          "id": "s01-logo",
+          "label": "官方 Logo",
+          "role": "title-logo",
+          "aliases": ["OpenClaw logo"],
+          "type": "image",
+          "src": "./assets/openclaw-logo-text.svg",
+          "x": 0.9,
+          "y": 1.4,
+          "w": 4.2,
+          "h": 0.85,
+          "animation": {
+            "effect": "slide-up",
+            "build": 2,
+            "durationMs": 640
+          }
+        },
+        {
+          "id": "s01-subtitle",
+          "label": "封面副标题",
+          "role": "title-secondary",
+          "type": "text",
+          "text": "把 onboarding、OAuth、gateway、dashboard、devices、skills 与 MCP 工作流整合成一个更容易上手的本地执行入口。",
+          "x": 0.92,
+          "y": 2.55,
+          "w": 4.95,
+          "h": 1.36,
+          "style": {
+            "fontSize": 19,
+            "color": "#C6D8EE",
+            "lineHeight": "1.55"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 2,
+            "durationMs": 620,
+            "delayMs": 640
+          }
+        },
+        {
+          "id": "s01-note-bg",
+          "label": "说明底板",
+          "role": "support-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.9,
+          "y": 4.78,
+          "w": 4.65,
+          "h": 1.18,
+          "style": {
+            "backgroundColor": "#0A1C33",
+            "borderColor": "#193A59"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 4,
+            "durationMs": 480
+          }
+        },
+        {
+          "id": "s01-note",
+          "label": "说明文字",
+          "role": "supporting-copy",
+          "type": "text",
+          "text": "在当前工作区里，它既是 skill 的运行环境，也是连接 CLI、TUI、浏览器界面和 MCP 的控制中枢。",
+          "x": 1.16,
+          "y": 5.08,
+          "w": 4.05,
+          "h": 0.72,
+          "style": {
+            "fontSize": 16,
+            "color": "#E6F0FF",
+            "lineHeight": "1.45"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 4,
+            "durationMs": 560,
+            "delayMs": 1640
+          }
+        },
+        {
+          "id": "s01-hero",
+          "label": "官方界面图",
+          "role": "hero-visual",
+          "aliases": ["右侧大图"],
+          "type": "image",
+          "src": "./assets/agents-ui-official.jpg",
+          "x": 6.18,
+          "y": 1.2,
+          "w": 6.05,
+          "h": 3.55,
+          "animation": {
+            "effect": "zoom-in",
+            "build": 3,
+            "durationMs": 720
+          }
+        },
+        {
+          "id": "s01-hero-caption",
+          "label": "界面图说明",
+          "role": "hero-caption",
+          "type": "subtitle",
+          "text": "官方 showcase 中的 Agents UI 截图",
+          "x": 7.48,
+          "y": 4.96,
+          "w": 3.1,
+          "h": 0.22,
+          "style": {
+            "fontSize": 13,
+            "color": "#9BB4D1"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 3,
+            "durationMs": 480,
+            "delayMs": 1120
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-02",
+      "label": "定位",
+      "type": "two-column",
+      "components": [
+        {
+          "id": "s02-bg",
+          "label": "页面背景",
+          "role": "background",
+          "type": "image",
+          "src": "./assets/bg-grid.svg",
+          "x": 0,
+          "y": 0,
+          "w": 13.333,
+          "h": 7.5
+        },
+        {
+          "id": "s02-title",
+          "label": "定位标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "OpenClaw 是什么",
+          "x": 0.9,
+          "y": 0.72,
+          "w": 5.2,
+          "h": 0.62,
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "#F4F9FF"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 1,
+            "durationMs": 520
+          }
+        },
+        {
+          "id": "s02-subtitle",
+          "label": "定位副标题",
+          "role": "title-secondary",
+          "type": "subtitle",
+          "text": "不是单一命令，而是一条完整的本地 AI 执行链路",
+          "x": 0.92,
+          "y": 1.32,
+          "w": 5.5,
+          "h": 0.3,
+          "style": {
+            "fontSize": 15,
+            "color": "#9BB4D1"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 1,
+            "durationMs": 420,
+            "delayMs": 240
+          }
+        },
+        {
+          "id": "s02-card-1-bg",
+          "label": "左卡1底板",
+          "role": "body-left-card1-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 1.9,
+          "w": 5.1,
+          "h": 1.18,
+          "style": {
+            "backgroundColor": "#0C182B",
+            "borderColor": "#18314C"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 2,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s02-card-1-title",
+          "label": "左卡1标题",
+          "role": "body-left-card1-title",
+          "type": "subtitle",
+          "text": "安装与认证",
+          "x": 1.22,
+          "y": 2.14,
+          "w": 1.9,
+          "h": 0.24,
+          "style": {
+            "fontSize": 17,
+            "bold": true,
+            "color": "#7FDBFF"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 2,
+            "durationMs": 440,
+            "delayMs": 560
+          }
+        },
+        {
+          "id": "s02-card-1-text",
+          "label": "左卡1正文",
+          "role": "body-left-card1",
+          "type": "text",
+          "text": "onboard、OpenAI Codex OAuth 和环境准备被整合成一套明确的首次启动路径。",
+          "x": 1.22,
+          "y": 2.46,
+          "w": 4.28,
+          "h": 0.42,
+          "style": {
+            "fontSize": 15,
+            "color": "#D8E7F8",
+            "lineHeight": "1.4"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 2,
+            "durationMs": 440,
+            "delayMs": 640
+          }
+        },
+        {
+          "id": "s02-card-2-bg",
+          "label": "左卡2底板",
+          "role": "body-left-card2-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 3.28,
+          "w": 5.1,
+          "h": 1.22,
+          "style": {
+            "backgroundColor": "#0C182B",
+            "borderColor": "#18314C"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 3,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s02-card-2-title",
+          "label": "左卡2标题",
+          "role": "body-left-card2-title",
+          "type": "subtitle",
+          "text": "服务与控制台",
+          "x": 1.22,
+          "y": 3.54,
+          "w": 2.2,
+          "h": 0.24,
+          "style": {
+            "fontSize": 17,
+            "bold": true,
+            "color": "#7FDBFF"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 3,
+            "durationMs": 440,
+            "delayMs": 980
+          }
+        },
+        {
+          "id": "s02-card-2-text",
+          "label": "左卡2正文",
+          "role": "body-left-card2",
+          "type": "text",
+          "text": "gateway、dashboard 与 TUI 让本地服务、浏览器界面和终端交互处在同一套体系内。",
+          "x": 1.22,
+          "y": 3.86,
+          "w": 4.32,
+          "h": 0.45,
+          "style": {
+            "fontSize": 15,
+            "color": "#D8E7F8",
+            "lineHeight": "1.4"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 3,
+            "durationMs": 440,
+            "delayMs": 1060
+          }
+        },
+        {
+          "id": "s02-card-3-bg",
+          "label": "左卡3底板",
+          "role": "body-left-card3-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 4.72,
+          "w": 5.1,
+          "h": 1.2,
+          "style": {
+            "backgroundColor": "#0C182B",
+            "borderColor": "#18314C"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 4,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s02-card-3-title",
+          "label": "左卡3标题",
+          "role": "body-left-card3-title",
+          "type": "subtitle",
+          "text": "Skills 与 MCP",
+          "x": 1.22,
+          "y": 4.97,
+          "w": 2.0,
+          "h": 0.24,
+          "style": {
+            "fontSize": 17,
+            "bold": true,
+            "color": "#7FDBFF"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 4,
+            "durationMs": 440,
+            "delayMs": 1400
+          }
+        },
+        {
+          "id": "s02-card-3-text",
+          "label": "左卡3正文",
+          "role": "body-left-card3",
+          "type": "text",
+          "text": "在这个工作区里，多个 skill 都把 OpenClaw 作为默认宿主，同时也能联动外部 MCP 工作流。",
+          "x": 1.22,
+          "y": 5.28,
+          "w": 4.35,
+          "h": 0.44,
+          "style": {
+            "fontSize": 15,
+            "color": "#D8E7F8",
+            "lineHeight": "1.4"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 4,
+            "durationMs": 440,
+            "delayMs": 1480
+          }
+        },
+        {
+          "id": "s02-diagram",
+          "label": "官方监控截图",
+          "role": "body-right",
+          "aliases": ["第二页右侧结构图"],
+          "type": "image",
+          "src": "./assets/codexmonitor-official.png",
+          "x": 7.12,
+          "y": 1.55,
+          "w": 5.15,
+          "h": 3.55,
+          "animation": {
+            "effect": "zoom-in",
+            "build": 5,
+            "durationMs": 760
+          }
+        },
+        {
+          "id": "s02-caption",
+          "label": "结构图说明",
+          "role": "body-right-caption",
+          "type": "text",
+          "text": "官方 showcase 中的 CodexMonitor 截图，能更直观看到 OpenClaw 连接到实际工作流后的产品形态。",
+          "x": 7.36,
+          "y": 5.4,
+          "w": 4.8,
+          "h": 0.46,
+          "style": {
+            "fontSize": 14,
+            "color": "#9BB4D1",
+            "lineHeight": "1.35"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 5,
+            "durationMs": 440,
+            "delayMs": 1900
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-03",
+      "label": "价值",
+      "type": "comparison",
+      "components": [
+        {
+          "id": "s03-bg",
+          "label": "页面背景",
+          "role": "background",
+          "type": "image",
+          "src": "./assets/bg-grid.svg",
+          "x": 0,
+          "y": 0,
+          "w": 13.333,
+          "h": 7.5
+        },
+        {
+          "id": "s03-title",
+          "label": "价值标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "为什么它值得单独介绍",
+          "x": 0.9,
+          "y": 0.72,
+          "w": 5.8,
+          "h": 0.62,
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "#F4F9FF"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 1,
+            "durationMs": 520
+          }
+        },
+        {
+          "id": "s03-subtitle",
+          "label": "价值副标题",
+          "role": "title-secondary",
+          "type": "subtitle",
+          "text": "它把安装、运维、交互与工作流统一进一个更顺手的入口",
+          "x": 0.92,
+          "y": 1.32,
+          "w": 6.2,
+          "h": 0.3,
+          "style": {
+            "fontSize": 15,
+            "color": "#9BB4D1"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 1,
+            "durationMs": 420,
+            "delayMs": 220
+          }
+        },
+        {
+          "id": "s03-card-1-bg",
+          "label": "价值卡1底板",
+          "role": "value-card-1-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 2.0,
+          "w": 3.8,
+          "h": 3.35,
+          "style": {
+            "backgroundColor": "#0D1C31",
+            "borderColor": "#173B5F"
+          }
+        },
+        {
+          "id": "s03-card-1-tag",
+          "label": "价值卡1标签",
+          "role": "value-card-1-tag",
+          "type": "subtitle",
+          "text": "01 / Faster Setup",
+          "x": 1.24,
+          "y": 2.28,
+          "w": 2.2,
+          "h": 0.22,
+          "style": {
+            "fontSize": 14,
+            "color": "#7FDBFF",
+            "bold": true
+          }
+        },
+        {
+          "id": "s03-card-1-title",
+          "label": "价值卡1标题",
+          "role": "value-card-1-title",
+          "type": "text",
+          "text": "把首次安装从一堆零散命令，压缩成一条更稳的 onboarding 路径。",
+          "x": 1.24,
+          "y": 2.78,
+          "w": 3.02,
+          "h": 0.95,
+          "style": {
+            "fontSize": 20,
+            "color": "#F4F9FF",
+            "bold": true,
+            "lineHeight": "1.38"
+          }
+        },
+        {
+          "id": "s03-card-1-text",
+          "label": "价值卡1正文",
+          "role": "value-card-1",
+          "type": "text",
+          "text": "安装文档里专门处理了 brew 权限、OAuth 交互模式、gateway 启动和 nvm 环境丢失等高频问题。",
+          "x": 1.24,
+          "y": 4.12,
+          "w": 3.0,
+          "h": 0.86,
+          "style": {
+            "fontSize": 15,
+            "color": "#C7D8EC",
+            "lineHeight": "1.45"
+          }
+        },
+        {
+          "id": "s03-card-2-bg",
+          "label": "价值卡2底板",
+          "role": "value-card-2-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 4.78,
+          "y": 2.0,
+          "w": 3.8,
+          "h": 3.35,
+          "style": {
+            "backgroundColor": "#0D1C31",
+            "borderColor": "#173B5F"
+          }
+        },
+        {
+          "id": "s03-card-2-tag",
+          "label": "价值卡2标签",
+          "role": "value-card-2-tag",
+          "type": "subtitle",
+          "text": "02 / Visible Runtime",
+          "x": 5.1,
+          "y": 2.28,
+          "w": 2.35,
+          "h": 0.22,
+          "style": {
+            "fontSize": 14,
+            "color": "#7FDBFF",
+            "bold": true
+          }
+        },
+        {
+          "id": "s03-card-2-title",
+          "label": "价值卡2标题",
+          "role": "value-card-2-title",
+          "type": "text",
+          "text": "把 CLI、dashboard、TUI 和 devices 的状态放进同一个可观察系统。",
+          "x": 5.1,
+          "y": 2.78,
+          "w": 3.02,
+          "h": 0.95,
+          "style": {
+            "fontSize": 20,
+            "color": "#F4F9FF",
+            "bold": true,
+            "lineHeight": "1.38"
+          }
+        },
+        {
+          "id": "s03-card-2-text",
+          "label": "价值卡2正文",
+          "role": "value-card-2",
+          "type": "text",
+          "text": "status、dashboard、approve、clear 和 repair 这些命令，让排错不再只能靠猜。",
+          "x": 5.1,
+          "y": 4.12,
+          "w": 3.0,
+          "h": 0.82,
+          "style": {
+            "fontSize": 15,
+            "color": "#C7D8EC",
+            "lineHeight": "1.45"
+          }
+        },
+        {
+          "id": "s03-card-3-bg",
+          "label": "价值卡3底板",
+          "role": "value-card-3-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 8.64,
+          "y": 2.0,
+          "w": 3.78,
+          "h": 3.35,
+          "style": {
+            "backgroundColor": "#10315A",
+            "borderColor": "#39C6FF"
+          }
+        },
+        {
+          "id": "s03-card-3-tag",
+          "label": "价值卡3标签",
+          "role": "value-card-3-tag",
+          "type": "subtitle",
+          "text": "03 / Workflow Hub",
+          "x": 8.96,
+          "y": 2.28,
+          "w": 2.18,
+          "h": 0.22,
+          "style": {
+            "fontSize": 14,
+            "color": "#8AE7FF",
+            "bold": true
+          }
+        },
+        {
+          "id": "s03-card-3-title",
+          "label": "价值卡3标题",
+          "role": "value-card-3-title",
+          "type": "text",
+          "text": "让 skill、浏览器自动化和 MCP 调用可以落在同一个运行入口里。",
+          "x": 8.96,
+          "y": 2.78,
+          "w": 2.96,
+          "h": 0.95,
+          "style": {
+            "fontSize": 20,
+            "color": "#F7FBFF",
+            "bold": true,
+            "lineHeight": "1.38"
+          }
+        },
+        {
+          "id": "s03-card-3-text",
+          "label": "价值卡3正文",
+          "role": "value-card-3",
+          "type": "text",
+          "text": "在这个工作区里，Publish-All、公众号工具链和小红书 skill 都把它视为长期宿主环境。",
+          "x": 8.96,
+          "y": 4.12,
+          "w": 2.96,
+          "h": 0.82,
+          "style": {
+            "fontSize": 15,
+            "color": "#D9ECFF",
+            "lineHeight": "1.45"
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-04",
+      "label": "安装流程",
+      "type": "two-column",
+      "components": [
+        {
+          "id": "s04-bg",
+          "label": "页面背景",
+          "role": "background",
+          "type": "image",
+          "src": "./assets/bg-grid.svg",
+          "x": 0,
+          "y": 0,
+          "w": 13.333,
+          "h": 7.5
+        },
+        {
+          "id": "s04-title",
+          "label": "安装标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "推荐安装流程",
+          "x": 0.9,
+          "y": 0.72,
+          "w": 5.0,
+          "h": 0.62,
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "#F4F9FF"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 1,
+            "durationMs": 520
+          }
+        },
+        {
+          "id": "s04-subtitle",
+          "label": "安装副标题",
+          "role": "title-secondary",
+          "type": "subtitle",
+          "text": "先保稳定，再追求自动化",
+          "x": 0.92,
+          "y": 1.32,
+          "w": 3.5,
+          "h": 0.24,
+          "style": {
+            "fontSize": 15,
+            "color": "#9BB4D1"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 1,
+            "durationMs": 420,
+            "delayMs": 220
+          }
+        },
+        {
+          "id": "s04-step-bg",
+          "label": "步骤底板",
+          "role": "body-left-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 1.84,
+          "w": 5.42,
+          "h": 4.46,
+          "style": {
+            "backgroundColor": "#0B172A",
+            "borderColor": "#18314C"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 2,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s04-steps",
+          "label": "安装步骤",
+          "role": "body-left",
+          "type": "text",
+          "text": "01  先用 nvm 准备 Node LTS 与 npm\n\n02  npm i -g openclaw\n\n03  先尝试 non-interactive，失败时回退到交互 OAuth\n\n04  安装后立刻 gateway install + start\n\n05  用 status、dashboard 与 token 验证连通",
+          "x": 1.26,
+          "y": 2.16,
+          "w": 4.62,
+          "h": 3.58,
+          "style": {
+            "fontSize": 17,
+            "color": "#E6F0FF",
+            "lineHeight": "1.62"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 2,
+            "durationMs": 620,
+            "delayMs": 560
+          }
+        },
+        {
+          "id": "s04-diagram",
+          "label": "官方 onboarding 截图",
+          "role": "body-right",
+          "type": "image",
+          "src": "./assets/choose-gateway-official.png",
+          "x": 7.02,
+          "y": 1.66,
+          "w": 5.18,
+          "h": 3.85,
+          "animation": {
+            "effect": "zoom-in",
+            "build": 3,
+            "durationMs": 720
+          }
+        },
+        {
+          "id": "s04-code-bg",
+          "label": "命令底板",
+          "role": "body-right-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 7.12,
+          "y": 5.78,
+          "w": 5.0,
+          "h": 0.9,
+          "style": {
+            "backgroundColor": "#0B172A",
+            "borderColor": "#18314C"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 4,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s04-code",
+          "label": "命令行片段",
+          "role": "body-right-code",
+          "type": "text",
+          "text": "nvm use --lts   ·   openclaw onboard   ·   openclaw gateway start",
+          "x": 7.38,
+          "y": 6.08,
+          "w": 4.44,
+          "h": 0.24,
+          "style": {
+            "fontSize": 13,
+            "fontFace": "Menlo",
+            "color": "#8AE7FF"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 4,
+            "durationMs": 520,
+            "delayMs": 1540
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-05",
+      "label": "排错",
+      "type": "comparison",
+      "components": [
+        {
+          "id": "s05-bg",
+          "label": "页面背景",
+          "role": "background",
+          "type": "image",
+          "src": "./assets/bg-grid.svg",
+          "x": 0,
+          "y": 0,
+          "w": 13.333,
+          "h": 7.5
+        },
+        {
+          "id": "s05-title",
+          "label": "排错标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "第一次上手最容易踩的坑",
+          "x": 0.9,
+          "y": 0.72,
+          "w": 6.2,
+          "h": 0.62,
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "#F4F9FF"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 1,
+            "durationMs": 520
+          }
+        },
+        {
+          "id": "s05-card-1-bg",
+          "label": "坑1底板",
+          "role": "pitfall-card-1-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 1.82,
+          "w": 3.9,
+          "h": 1.68,
+          "style": {
+            "backgroundColor": "#0D1C31",
+            "borderColor": "#173B5F"
+          }
+        },
+        {
+          "id": "s05-card-1-title",
+          "label": "坑1标题",
+          "role": "pitfall-card-1-title",
+          "type": "subtitle",
+          "text": "brew 需要 sudo",
+          "x": 1.2,
+          "y": 2.08,
+          "w": 2.3,
+          "h": 0.24,
+          "style": {
+            "fontSize": 17,
+            "color": "#7FDBFF",
+            "bold": true
+          }
+        },
+        {
+          "id": "s05-card-1-text",
+          "label": "坑1正文",
+          "role": "pitfall-card-1",
+          "type": "text",
+          "text": "没有管理员权限的机器上，优先改走 nvm + npm 路线。",
+          "x": 1.2,
+          "y": 2.46,
+          "w": 3.0,
+          "h": 0.5,
+          "style": {
+            "fontSize": 15,
+            "color": "#D8E7F8",
+            "lineHeight": "1.4"
+          }
+        },
+        {
+          "id": "s05-card-2-bg",
+          "label": "坑2底板",
+          "role": "pitfall-card-2-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 4.95,
+          "y": 1.82,
+          "w": 3.9,
+          "h": 1.68,
+          "style": {
+            "backgroundColor": "#0D1C31",
+            "borderColor": "#173B5F"
+          }
+        },
+        {
+          "id": "s05-card-2-title",
+          "label": "坑2标题",
+          "role": "pitfall-card-2-title",
+          "type": "subtitle",
+          "text": "OAuth 不能强行无交互",
+          "x": 5.22,
+          "y": 2.08,
+          "w": 2.8,
+          "h": 0.24,
+          "style": {
+            "fontSize": 17,
+            "color": "#7FDBFF",
+            "bold": true
+          }
+        },
+        {
+          "id": "s05-card-2-text",
+          "label": "坑2正文",
+          "role": "pitfall-card-2",
+          "type": "text",
+          "text": "新版本下遇到失败时，要允许回退到浏览器交互授权。",
+          "x": 5.22,
+          "y": 2.46,
+          "w": 3.0,
+          "h": 0.5,
+          "style": {
+            "fontSize": 15,
+            "color": "#D8E7F8",
+            "lineHeight": "1.4"
+          }
+        },
+        {
+          "id": "s05-card-3-bg",
+          "label": "坑3底板",
+          "role": "pitfall-card-3-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 8.98,
+          "y": 1.82,
+          "w": 3.43,
+          "h": 1.68,
+          "style": {
+            "backgroundColor": "#10315A",
+            "borderColor": "#39C6FF"
+          }
+        },
+        {
+          "id": "s05-card-3-title",
+          "label": "坑3标题",
+          "role": "pitfall-card-3-title",
+          "type": "subtitle",
+          "text": "gateway 未启动",
+          "x": 9.24,
+          "y": 2.08,
+          "w": 2.3,
+          "h": 0.24,
+          "style": {
+            "fontSize": 17,
+            "color": "#8AE7FF",
+            "bold": true
+          }
+        },
+        {
+          "id": "s05-card-3-text",
+          "label": "坑3正文",
+          "role": "pitfall-card-3",
+          "type": "text",
+          "text": "只做 onboarding 不启动 gateway 时，status 容易显示 unreachable。",
+          "x": 9.24,
+          "y": 2.46,
+          "w": 2.62,
+          "h": 0.58,
+          "style": {
+            "fontSize": 15,
+            "color": "#D9ECFF",
+            "lineHeight": "1.4"
+          }
+        },
+        {
+          "id": "s05-support-bg",
+          "label": "修复建议底板",
+          "role": "support-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 4.2,
+          "w": 11.48,
+          "h": 1.55,
+          "style": {
+            "backgroundColor": "#0B172A",
+            "borderColor": "#18314C"
+          }
+        },
+        {
+          "id": "s05-support-title",
+          "label": "修复建议标题",
+          "role": "support-title",
+          "type": "subtitle",
+          "text": "排错顺序建议",
+          "x": 1.22,
+          "y": 4.52,
+          "w": 1.8,
+          "h": 0.22,
+          "style": {
+            "fontSize": 16,
+            "color": "#7FDBFF",
+            "bold": true
+          }
+        },
+        {
+          "id": "s05-support-text",
+          "label": "修复建议正文",
+          "role": "support",
+          "type": "text",
+          "text": "先看 nvm / node 是否可用，再确认 OAuth 是否需要交互回退，然后检查 gateway，最后处理 devices approve / clear / repair。",
+          "x": 1.22,
+          "y": 4.92,
+          "w": 10.7,
+          "h": 0.45,
+          "style": {
+            "fontSize": 16,
+            "color": "#E6F0FF",
+            "lineHeight": "1.45"
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-06",
+      "label": "生态与命令",
+      "type": "two-column",
+      "components": [
+        {
+          "id": "s06-bg",
+          "label": "页面背景",
+          "role": "background",
+          "type": "image",
+          "src": "./assets/bg-grid.svg",
+          "x": 0,
+          "y": 0,
+          "w": 13.333,
+          "h": 7.5
+        },
+        {
+          "id": "s06-title",
+          "label": "生态标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "在这个工作区里可以怎么用",
+          "x": 0.9,
+          "y": 0.72,
+          "w": 6.0,
+          "h": 0.62,
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "#F4F9FF"
+          }
+        },
+        {
+          "id": "s06-subtitle",
+          "label": "生态副标题",
+          "role": "title-secondary",
+          "type": "subtitle",
+          "text": "它既是技能宿主，也是连接命令行与 MCP 的中枢",
+          "x": 0.92,
+          "y": 1.32,
+          "w": 4.9,
+          "h": 0.24,
+          "style": {
+            "fontSize": 15,
+            "color": "#9BB4D1"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 1,
+            "durationMs": 420,
+            "delayMs": 220
+          }
+        },
+        {
+          "id": "s06-shot-1-bg",
+          "label": "左截图底板",
+          "role": "body-left-shot1-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 1.92,
+          "w": 5.52,
+          "h": 2.0,
+          "style": {
+            "backgroundColor": "#0B172A",
+            "borderColor": "#18314C"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 2,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s06-shot-1",
+          "label": "官方界面截图",
+          "role": "body-left-shot1",
+          "type": "image",
+          "src": "./assets/agents-ui-official.jpg",
+          "x": 1.08,
+          "y": 2.08,
+          "w": 5.2,
+          "h": 1.72,
+          "animation": {
+            "effect": "zoom-in",
+            "build": 2,
+            "durationMs": 680,
+            "delayMs": 560
+          }
+        },
+        {
+          "id": "s06-shot-2-bg",
+          "label": "下方截图底板",
+          "role": "body-left-shot2-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 0.92,
+          "y": 4.18,
+          "w": 5.52,
+          "h": 1.92,
+          "style": {
+            "backgroundColor": "#0B172A",
+            "borderColor": "#18314C"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 3,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s06-shot-2",
+          "label": "官方消息截图",
+          "role": "body-left-shot2",
+          "type": "image",
+          "src": "./assets/pr-review-telegram-official.jpg",
+          "x": 1.08,
+          "y": 4.34,
+          "w": 5.2,
+          "h": 1.6,
+          "animation": {
+            "effect": "zoom-in",
+            "build": 3,
+            "durationMs": 680,
+            "delayMs": 980
+          }
+        },
+        {
+          "id": "s06-code-bg",
+          "label": "命令面板底板",
+          "role": "body-right-bg",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 7.02,
+          "y": 1.82,
+          "w": 5.25,
+          "h": 4.05,
+          "style": {
+            "backgroundColor": "#0B172A",
+            "borderColor": "#18314C"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 4,
+            "durationMs": 420
+          }
+        },
+        {
+          "id": "s06-code-title",
+          "label": "命令面板标题",
+          "role": "body-right-title",
+          "type": "subtitle",
+          "text": "First Commands To Remember",
+          "x": 7.34,
+          "y": 2.14,
+          "w": 3.15,
+          "h": 0.22,
+          "style": {
+            "fontSize": 16,
+            "color": "#7FDBFF",
+            "bold": true
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 4,
+            "durationMs": 420,
+            "delayMs": 1400
+          }
+        },
+        {
+          "id": "s06-code-list",
+          "label": "命令列表",
+          "role": "body-right",
+          "aliases": ["右侧命令面板"],
+          "type": "text",
+          "text": "openclaw status\n查看当前状态\n\nopenclaw dashboard\n打开本地 dashboard\n\nopenclaw devices approve --latest\n处理修复或升级后的配对请求\n\nopenclaw tui --token ...\n以终端方式连接与操作",
+          "x": 7.34,
+          "y": 2.58,
+          "w": 4.42,
+          "h": 2.72,
+          "style": {
+            "fontSize": 15,
+            "fontFace": "Menlo",
+            "color": "#E6F0FF",
+            "lineHeight": "1.55"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 4,
+            "durationMs": 560,
+            "delayMs": 1480
+          }
+        },
+        {
+          "id": "s06-close",
+          "label": "结尾句",
+          "role": "closing-line",
+          "type": "text",
+          "text": "官方截图也说明了它并不只是安装工具，而是一个真正承接多界面、多通道和自动化工作流的长期运行环境。",
+          "x": 0.92,
+          "y": 6.28,
+          "w": 11.25,
+          "h": 0.46,
+          "style": {
+            "fontSize": 16,
+            "color": "#C6D8EE",
+            "lineHeight": "1.45"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 5,
+            "durationMs": 500,
+            "delayMs": 1880
+          }
+        }
+      ]
+    }
+  ]
+}

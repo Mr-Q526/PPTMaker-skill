@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" fill="none">
+  <rect width="760" height="520" rx="28" fill="#0B172A"/>
+  <rect x="54" y="72" width="170" height="90" rx="22" fill="#112845" stroke="#2D547D" stroke-width="2"/>
+  <rect x="294" y="72" width="170" height="90" rx="22" fill="#112845" stroke="#2D547D" stroke-width="2"/>
+  <rect x="534" y="72" width="170" height="90" rx="22" fill="#112845" stroke="#2D547D" stroke-width="2"/>
+  <rect x="174" y="246" width="170" height="90" rx="22" fill="#13345C" stroke="#39C6FF" stroke-width="2"/>
+  <rect x="414" y="246" width="170" height="90" rx="22" fill="#13345C" stroke="#39C6FF" stroke-width="2"/>
+  <rect x="294" y="398" width="170" height="70" rx="22" fill="#0E213B" stroke="#2D547D" stroke-width="2"/>
+  <path d="M224 117H294" stroke="#39C6FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M464 117H534" stroke="#39C6FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M379 162V246" stroke="#39C6FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M259 336L324 398" stroke="#39C6FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M499 336L434 398" stroke="#39C6FF" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#E6F0FF" font-family="Aptos, Arial, sans-serif" font-size="24" font-weight="700">
+    <text x="85" y="124">Onboarding</text>
+    <text x="341" y="124">Gateway</text>
+    <text x="581" y="124">Dashboard</text>
+    <text x="219" y="298">Skills</text>
+    <text x="448" y="298">MCP</text>
+    <text x="337" y="441">Devices</text>
+  </g>
+</svg>
+
