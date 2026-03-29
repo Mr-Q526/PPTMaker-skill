@@ -11,6 +11,12 @@ description: 根据一句话主题、Markdown 或已有文稿生成结构化 PPT
 
 `用户输入 -> 创建项目文件夹 -> AI 生成 deck.json -> 预览渲染 -> 自然语言编辑 -> 导出 .pptx`
 
+当前系统新增了三层组织能力：
+
+- `template`：控制整体视觉风格和推荐版式
+- `archetype`：控制某类 PPT 的默认结构和起稿页序
+- `subskills/`：为个人介绍、项目介绍等具体方向提供更窄的 workflow
+
 ## 何时使用
 
 当用户提出以下需求时使用本技能：
@@ -39,12 +45,18 @@ description: 根据一句话主题、Markdown 或已有文稿生成结构化 PPT
   定义 `deck.json` 的结构与当前支持的组件。
 - `references/layout-rules.md`
   定义版式、字号、间距和溢出控制规则。
+- `references/template-catalog.md`
+  定义当前模板、archetype 和版式变体目录。
 - `references/prompt-patterns.md`
   定义大纲生成、页面生成、编辑指令改写的提示词模式。
+- `scripts/list_catalog.js`
+  列出模板、archetype、版式变体和已存在的子 skill。
+- `scripts/create_ppt_skill.js`
+  根据新场景脚手架出新的 PPT 子 skill 和 archetype。
 - `scripts/validate_deck.js`
   校验 deck 数据是否合法。
 - `scripts/init_project.js`
-  为每个新 PPT 创建独立项目文件夹。
+  为每个新 PPT 创建独立项目文件夹，并支持选择 template 和 archetype。
 - `scripts/build_project.js`
   在项目目录里一键校验、预览和导出。
 - `scripts/open_project_preview.js`
@@ -59,10 +71,14 @@ description: 根据一句话主题、Markdown 或已有文稿生成结构化 PPT
   将自然语言修改命令翻译为结构化 operations。
 - `scripts/edit_with_command.js`
   一步完成“自然语言指令 -> deck 修改”。
+- `subskills/personal-intro`
+  面向个人介绍类 PPT 的子 skill。
+- `subskills/project-intro`
+  面向项目介绍类 PPT 的子 skill。
 
 ## 推荐工作流
 
-1. 先创建独立项目目录，路径位于 `projects/<slug>/`。
+1. 先创建独立项目目录，路径位于 `projects/<slug>/`，并选择合适的 template / archetype。
 2. 阅读 `references/slide-schema.md`，确认当前支持哪些页面和组件。
 3. 根据用户输入在该项目目录里生成 `deck.json`。
 4. 运行项目构建脚本，生成 `preview.html` 和 `output.pptx`。
@@ -80,16 +96,21 @@ npm run project:new
 npm run validate
 npm run preview
 npm run export
+npm run catalog
 node scripts/edit_with_command.js samples/example-deck.json "把第二页右侧正文左移一点" outputs/example-command-deck.json outputs/example-command-plan.json
 node scripts/init_project.js openclaw-intro "OpenClaw 介绍"
+node scripts/init_project.js founder-profile "创始人介绍" --template profile-editorial --archetype personal-intro
+node scripts/init_project.js product-rollout "产品介绍" --template launch-stage --archetype project-intro
 node scripts/build_project.js projects/openclaw-intro
 node scripts/open_project_preview.js projects/openclaw-intro
+node scripts/create_ppt_skill.js customer-story "客户案例介绍" "适合客户案例复盘、售前演示和项目展示"
 ```
 
 ## deck 生成要求
 
 - 每个 slide 必须有稳定的 `id`
 - 每个 component 必须有稳定的 `id`
+- deck 建议同时带上 `meta.template` 和 `meta.archetype`
 - 所有组件必须显式给出 `x`, `y`, `w`, `h`
 - 坐标单位统一使用英寸，对齐 PowerPoint 宽屏页面
 - 文本内容要控制长度，避免超出布局预算
@@ -117,6 +138,13 @@ node scripts/open_project_preview.js projects/openclaw-intro
 - 右侧展示当前页、页码、build 数、组件数和检视面板
 - 悬停组件时必须能看到 `slide`、`component id`、`label`、`role`、`type`、坐标尺寸和 AI 编辑提示语
 - 点击组件后应锁定该组件信息，方便用户精确描述“修改这一个区块”
+
+## 模板与子 skill 约定
+
+- `template` 负责视觉风格和推荐页型变体，不直接替代 theme
+- `archetype` 负责某类 PPT 的默认起稿结构
+- `subskills/` 里的子 skill 应该只保留对应场景的简洁 workflow，不复制主技能的大量通用说明
+- 新建场景优先用 `scripts/create_ppt_skill.js`，同时生成一个新的 archetype 脚手架
 
 ## 动画说明
 

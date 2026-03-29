@@ -9,10 +9,11 @@ function runScript(scriptName, args) {
 function main() {
   const projectArg = process.argv[2];
   if (!projectArg) {
-    console.error("Usage: node scripts/build_project.js <project-dir>");
+    console.error("Usage: node scripts/build_project.js <project-dir> [--export]");
     process.exit(1);
   }
 
+  const shouldExport = process.argv.includes("--export");
   const projectDir = path.resolve(projectArg);
   const deckPath = path.join(projectDir, "deck.json");
   const previewPath = path.join(projectDir, "preview.html");
@@ -20,9 +21,13 @@ function main() {
 
   runScript("validate_deck.js", [deckPath]);
   runScript("render_preview.js", [deckPath, previewPath]);
-  runScript("export_ppt.js", [deckPath, outputPath]);
 
-  console.log(`Project built in ${projectDir}`);
+  if (shouldExport) {
+    runScript("export_ppt.js", [deckPath, outputPath]);
+    console.log(`Project built with export in ${projectDir}`);
+  } else {
+    console.log(`Project built in ${projectDir} (preview only, use --export to generate .pptx)`);
+  }
 }
 
 if (require.main === module) {

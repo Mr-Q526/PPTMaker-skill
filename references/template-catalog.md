@@ -17,11 +17,15 @@
 - `general-briefing`：通用汇报
 - `project-intro`：项目介绍
 - `personal-intro`：个人介绍
+- `customer-story`：客户案例介绍
+- `english-lesson`：英语课堂讲解
 
 ## 当前子 skill
 
 - `subskills/project-intro`
 - `subskills/personal-intro`
+- `subskills/customer-story`
+- `subskills/english-lesson`
 
 ## 命令
 

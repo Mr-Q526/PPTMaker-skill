@@ -2,3 +2,6 @@ node_modules/
 outputs/
 .DS_Store
 .env
+.venv/
+projects/*/preview.html
+projects/*/output.pptx

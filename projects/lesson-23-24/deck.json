@@ -1,0 +1,911 @@
+{
+  "meta": {
+    "title": "Lesson 23-24 Months & Holidays",
+    "theme": "business-clean",
+    "ratio": "16:9",
+    "mode": "editable",
+    "template": "business-briefing",
+    "archetype": "english-lesson"
+  },
+  "slides": [
+    {
+      "id": "slide-01",
+      "label": "封面",
+      "type": "cover",
+      "layoutVariant": "hero-left",
+      "components": [
+        {
+          "id": "s01-bg",
+          "label": "背景装饰",
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.333,
+          "h": 7.5,
+          "style": {
+            "fill": "#1E3A5F",
+            "opacity": 1
+          }
+        },
+        {
+          "id": "s01-accent-bar",
+          "label": "装饰条",
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 0.25,
+          "h": 7.5,
+          "style": {
+            "fill": "#F59E0B"
+          }
+        },
+        {
+          "id": "s01-title",
+          "label": "封面标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "Lesson 23-24",
+          "x": 1.2,
+          "y": 1.5,
+          "w": 8.0,
+          "h": 1.2,
+          "style": {
+            "fontSize": 42,
+            "bold": true,
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "id": "s01-subtitle",
+          "label": "课题副标题",
+          "type": "subtitle",
+          "text": "Months & Holidays — May and June",
+          "x": 1.2,
+          "y": 2.8,
+          "w": 8.0,
+          "h": 0.6,
+          "style": {
+            "fontSize": 24,
+            "color": "#F59E0B",
+            "bold": true
+          }
+        },
+        {
+          "id": "s01-info",
+          "label": "课程信息",
+          "type": "text",
+          "text": "六年级上册  |  课堂时长：10 分钟",
+          "x": 1.2,
+          "y": 3.7,
+          "w": 6.0,
+          "h": 0.4,
+          "style": {
+            "fontSize": 16,
+            "color": "#94A3B8"
+          }
+        },
+        {
+          "id": "s01-deco-circle",
+          "label": "装饰圆",
+          "type": "shape",
+          "shape": "roundedRect",
+          "x": 9.5,
+          "y": 1.8,
+          "w": 3.0,
+          "h": 3.0,
+          "style": {
+            "fill": "#F59E0B",
+            "opacity": 0.15
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-02",
+      "label": "课堂导入 Warm-up",
+      "type": "title-bullets",
+      "layoutVariant": "evidence-split",
+      "components": [
+        {
+          "id": "s02-title",
+          "label": "暖场标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "🌞 Warm-up: Let's Talk!",
+          "x": 0.9,
+          "y": 0.5,
+          "w": 11.0,
+          "h": 0.7,
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "#1E3A5F"
+          }
+        },
+        {
+          "id": "s02-divider",
+          "label": "分隔线",
+          "type": "divider",
+          "x": 0.9,
+          "y": 1.3,
+          "w": 11.0,
+          "h": 0.05,
+          "style": {
+            "color": "#F59E0B"
+          }
+        },
+        {
+          "id": "s02-question",
+          "label": "导入问题",
+          "type": "text",
+          "text": "Think about it:",
+          "x": 0.9,
+          "y": 1.6,
+          "w": 5.5,
+          "h": 0.5,
+          "style": {
+            "fontSize": 20,
+            "bold": true,
+            "color": "#475569"
+          }
+        },
+        {
+          "id": "s02-bullets",
+          "label": "导入互动问题",
+          "type": "bullet-list",
+          "items": [
+            "🗓️ How many months are there in a year?",
+            "🎉 What holidays do you know in May?",
+            "👨‍👩‍👧 When is Mother's Day?",
+            "⚽ What is your favorite month? Why?"
+          ],
+          "x": 0.9,
+          "y": 2.2,
+          "w": 6.0,
+          "h": 3.5,
+          "style": {
+            "fontSize": 22,
+            "color": "#1E3A5F"
+          },
+          "animation": {
+            "effect": "fade-in",
+            "build": 1,
+            "durationMs": 500
+          }
+        },
+        {
+          "id": "s02-tip",
+          "label": "教师提示",
+          "type": "text",
+          "text": "💡 Ask students to answer in English!",
+          "x": 7.5,
+          "y": 5.5,
+          "w": 5.0,
+          "h": 0.5,
+          "style": {
+            "fontSize": 14,
+            "color": "#F59E0B",
+            "italic": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-03",
+      "label": "课文学习 Lesson 23",
+      "type": "two-column",
+      "layoutVariant": "hero-left",
+      "components": [
+        {
+          "id": "s03-title",
+          "label": "课文标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "📖 Lesson 23 — Just Read and Talk",
+          "x": 0.9,
+          "y": 0.5,
+          "w": 11.0,
+          "h": 0.7,
+          "style": {
+            "fontSize": 26,
+            "bold": true,
+            "color": "#1E3A5F"
+          }
+        },
+        {
+          "id": "s03-divider",
+          "label": "分隔线",
+          "type": "divider",
+          "x": 0.9,
+          "y": 1.3,
+          "w": 11.0,
+          "h": 0.05,
+          "style": {
+            "color": "#1D4ED8"
+          }
+        },
+        {
+          "id": "s03-may-title",
+          "label": "五月小标题",
+          "type": "subtitle",
+          "text": "🌸 May — The Fifth Month",
+          "x": 0.9,
+          "y": 1.55,
+          "w": 5.5,
+          "h": 0.5,
+          "style": {
+            "fontSize": 20,
+            "bold": true,
+            "color": "#F59E0B"
+          }
+        },
+        {
+          "id": "s03-may-text",
+          "label": "五月课文",
+          "type": "text",
+          "text": "May is the fifth month of the year. Labour Day, or May Day, is on May 1st. People sing and dance to celebrate May Day. Mother's Day is also in May. We give gifts to our mothers to show our love.",
+          "x": 0.9,
+          "y": 2.15,
+          "w": 5.5,
+          "h": 2.2,
+          "style": {
+            "fontSize": 17,
+            "color": "#1E293B"
+          }
+        },
+        {
+          "id": "s03-june-title",
+          "label": "六月小标题",
+          "type": "subtitle",
+          "text": "☀️ June — The Sixth Month",
+          "x": 6.8,
+          "y": 1.55,
+          "w": 5.5,
+          "h": 0.5,
+          "style": {
+            "fontSize": 20,
+            "bold": true,
+            "color": "#F59E0B"
+          }
+        },
+        {
+          "id": "s03-june-text",
+          "label": "六月课文",
+          "type": "text",
+          "text": "June is the sixth month of the year. The first day of June is Children's Day in China. Many children perform to celebrate. Father's Day is in June, too. We also give gifts to our fathers to show our love.",
+          "x": 6.8,
+          "y": 2.15,
+          "w": 5.5,
+          "h": 2.2,
+          "style": {
+            "fontSize": 17,
+            "color": "#1E293B"
+          }
+        },
+        {
+          "id": "s03-cn-note",
+          "label": "中文提示",
+          "type": "text",
+          "text": "📌 五月：劳动节（5月1日）、母亲节 — 人们唱歌跳舞庆祝\n📌 六月：儿童节（6月1日）、父亲节 — 我们送礼物表达爱",
+          "x": 0.9,
+          "y": 4.8,
+          "w": 11.0,
+          "h": 1.2,
+          "style": {
+            "fontSize": 15,
+            "color": "#64748B",
+            "italic": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-04",
+      "label": "重点词汇 Key Vocabulary",
+      "type": "table",
+      "layoutVariant": "evidence-split",
+      "components": [
+        {
+          "id": "s04-title",
+          "label": "词汇标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "📝 Key Vocabulary 重点词汇",
+          "x": 0.9,
+          "y": 0.5,
+          "w": 11.0,
+          "h": 0.7,
+          "style": {
+            "fontSize": 26,
+            "bold": true,
+            "color": "#1E3A5F"
+          }
+        },
+        {
+          "id": "s04-divider",
+          "label": "分隔线",
+          "type": "divider",
+          "x": 0.9,
+          "y": 1.3,
+          "w": 11.0,
+          "h": 0.05,
+          "style": {
+            "color": "#10B981"
+          }
+        },
+        {
+          "id": "s04-table",
+          "label": "词汇表",
+          "type": "table",
+          "rows": [
+            [
+              "English 🇬🇧",
+              "中文 🇨🇳",
+              "Example Sentence"
+            ],
+            [
+              "May",
+              "五月",
+              "May is the fifth month."
+            ],
+            [
+              "June",
+              "六月",
+              "June is the sixth month."
+            ],
+            [
+              "fifth",
+              "第五",
+              "May is the fifth month of the year."
+            ],
+            [
+              "sixth",
+              "第六",
+              "June is the sixth month of the year."
+            ],
+            [
+              "celebrate",
+              "庆祝",
+              "People sing and dance to celebrate."
+            ],
+            [
+              "gift(s)",
+              "礼物",
+              "We give gifts to our mothers."
+            ],
+            [
+              "perform",
+              "表演",
+              "Many children perform to celebrate."
+            ],
+            [
+              "love",
+              "爱",
+              "We show our love."
+            ]
+          ],
+          "x": 0.9,
+          "y": 1.6,
+          "w": 11.0,
+          "h": 4.8,
+          "style": {
+            "fontSize": 16
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-05",
+      "label": "重点句型 Key Sentences",
+      "type": "title-bullets",
+      "layoutVariant": "evidence-split",
+      "components": [
+        {
+          "id": "s05-title",
+          "label": "句型标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "💬 Key Sentences 重点句型",
+          "x": 0.9,
+          "y": 0.5,
+          "w": 11.0,
+          "h": 0.7,
+          "style": {
+            "fontSize": 26,
+            "bold": true,
+            "color": "#1E3A5F"
+          }
+        },
+        {
+          "id": "s05-divider",
+          "label": "分隔线",
+          "type": "divider",
+          "x": 0.9,
+          "y": 1.3,
+          "w": 11.0,
+          "h": 0.05,
+          "style": {
+            "color": "#8B5CF6"
+          }
+        },
+        {
+          "id": "s05-pattern1-label",
+          "label": "句型一标签",
+          "type": "text",
+          "text": "句型一",
+          "x": 0.9,
+          "y": 1.6,
+          "w": 1.2,
+          "h": 0.4,
+          "style": {
+            "fontSize": 14,
+            "color": "#FFFFFF",
+            "fill": "#8B5CF6"
+          }
+        },
+        {
+          "id": "s05-pattern1",
+          "label": "句型结构一",
+          "type": "text",
+          "text": "_____ is the _____ month of the year.",
+          "x": 2.3,
+          "y": 1.55,
+          "w": 9.5,
+          "h": 0.5,
+          "style": {
+            "fontSize": 24,
+            "bold": true,
+            "color": "#1E3A5F"
+          }
+        },
+        {
+          "id": "s05-example1",
+          "label": "句型一例句",
+          "type": "bullet-list",
+          "items": [
+            "May is the fifth month of the year.",
+            "June is the sixth month of the year."
+          ],
+          "x": 2.3,
+          "y": 2.2,
+          "w": 9.5,
+          "h": 1.0,
+          "style": {
+            "fontSize": 18,
+            "color": "#475569"
+          }
+        },
+        {
+          "id": "s05-pattern2-label",
+          "label": "句型二标签",
+          "type": "text",
+          "text": "句型二",
+          "x": 0.9,
+          "y": 3.5,
+          "w": 1.2,
+          "h": 0.4,
+          "style": {
+            "fontSize": 14,
+            "color": "#FFFFFF",
+            "fill": "#F59E0B"
+          }
+        },
+        {
+          "id": "s05-pattern2",
+          "label": "句型结构二",
+          "type": "text",
+          "text": "We give gifts to _____ to show our love.",
+          "x": 2.3,
+          "y": 3.45,
+          "w": 9.5,
+          "h": 0.5,
+          "style": {
+            "fontSize": 24,
+            "bold": true,
+            "color": "#1E3A5F"
+          }
+        },
+        {
+          "id": "s05-example2",
+          "label": "句型二例句",
+          "type": "bullet-list",
+          "items": [
+            "We give gifts to our mothers to show our love.",
+            "We also give gifts to our fathers to show our love."
+          ],
+          "x": 2.3,
+          "y": 4.1,
+          "w": 9.5,
+          "h": 1.0,
+          "style": {
+            "fontSize": 18,
+            "color": "#475569"
+          }
+        },
+        {
+          "id": "s05-cn-tip",
+          "label": "中文翻译提示",
+          "type": "text",
+          "text": "💡 句型一：……是一年中的第……个月。 句型二：我们送礼物给……来表达我们的爱。",
+          "x": 0.9,
+          "y": 5.5,
+          "w": 11.0,
+          "h": 0.5,
+          "style": {
+            "fontSize": 14,
+            "color": "#94A3B8",
+            "italic": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-06",
+      "label": "月份表 Months of the Year",
+      "type": "table",
+      "layoutVariant": "evidence-split",
+      "components": [
+        {
+          "id": "s06-title",
+          "label": "月份表标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "🗓️ Months of the Year 十二月份",
+          "x": 0.9,
+          "y": 0.5,
+          "w": 11.0,
+          "h": 0.7,
+          "style": {
+            "fontSize": 26,
+            "bold": true,
+            "color": "#1E3A5F"
+          }
+        },
+        {
+          "id": "s06-divider",
+          "label": "分隔线",
+          "type": "divider",
+          "x": 0.9,
+          "y": 1.3,
+          "w": 11.0,
+          "h": 0.05,
+          "style": {
+            "color": "#F59E0B"
+          }
+        },
+        {
+          "id": "s06-table",
+          "label": "月份对照表",
+          "type": "table",
+          "rows": [
+            [
+              "#",
+              "English",
+              "中文",
+              "#",
+              "English",
+              "中文"
+            ],
+            [
+              "1",
+              "January",
+              "一月",
+              "7",
+              "July",
+              "七月"
+            ],
+            [
+              "2",
+              "February",
+              "二月",
+              "8",
+              "August",
+              "八月"
+            ],
+            [
+              "3",
+              "March",
+              "三月",
+              "9",
+              "September",
+              "九月"
+            ],
+            [
+              "4",
+              "April",
+              "四月",
+              "10",
+              "October",
+              "十月"
+            ],
+            [
+              "5",
+              "★ May",
+              "★ 五月",
+              "11",
+              "November",
+              "十一月"
+            ],
+            [
+              "6",
+              "★ June",
+              "★ 六月",
+              "12",
+              "December",
+              "十二月"
+            ]
+          ],
+          "x": 0.9,
+          "y": 1.6,
+          "w": 11.0,
+          "h": 4.5,
+          "style": {
+            "fontSize": 18
+          }
+        },
+        {
+          "id": "s06-note",
+          "label": "本课重点提示",
+          "type": "text",
+          "text": "★ 标记为本课重点月份 — Can you read them all?",
+          "x": 0.9,
+          "y": 6.3,
+          "w": 11.0,
+          "h": 0.4,
+          "style": {
+            "fontSize": 14,
+            "color": "#F59E0B",
+            "bold": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-07",
+      "label": "课堂练习 Practice",
+      "type": "title-bullets",
+      "layoutVariant": "evidence-split",
+      "components": [
+        {
+          "id": "s07-title",
+          "label": "练习标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "✏️ Let's Practice! 课堂练习",
+          "x": 0.9,
+          "y": 0.5,
+          "w": 11.0,
+          "h": 0.7,
+          "style": {
+            "fontSize": 26,
+            "bold": true,
+            "color": "#1E3A5F"
+          }
+        },
+        {
+          "id": "s07-divider",
+          "label": "分隔线",
+          "type": "divider",
+          "x": 0.9,
+          "y": 1.3,
+          "w": 11.0,
+          "h": 0.05,
+          "style": {
+            "color": "#EF4444"
+          }
+        },
+        {
+          "id": "s07-q1-label",
+          "label": "第一题标签",
+          "type": "text",
+          "text": "Fill in",
+          "x": 0.9,
+          "y": 1.6,
+          "w": 1.2,
+          "h": 0.4,
+          "style": {
+            "fontSize": 13,
+            "color": "#FFFFFF",
+            "fill": "#EF4444"
+          }
+        },
+        {
+          "id": "s07-q1",
+          "label": "填空练习",
+          "type": "bullet-list",
+          "items": [
+            "1. May is the ________ month of the year.",
+            "2. June is the ________ month of the year.",
+            "3. ________ Day is on May 1st.",
+            "4. Children's Day is on ________ 1st."
+          ],
+          "x": 0.9,
+          "y": 2.2,
+          "w": 6.0,
+          "h": 2.8,
+          "style": {
+            "fontSize": 19,
+            "color": "#1E293B"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 1,
+            "durationMs": 400
+          }
+        },
+        {
+          "id": "s07-q2-label",
+          "label": "口语练习标签",
+          "type": "text",
+          "text": "Say it!",
+          "x": 7.5,
+          "y": 1.6,
+          "w": 1.2,
+          "h": 0.4,
+          "style": {
+            "fontSize": 13,
+            "color": "#FFFFFF",
+            "fill": "#10B981"
+          }
+        },
+        {
+          "id": "s07-speaking",
+          "label": "口语练习",
+          "type": "bullet-list",
+          "items": [
+            "🎤 Tell your partner:",
+            "\"My birthday is in _____.\"",
+            "\"_____ is the _____ month.\"",
+            "\"I like _____ because _____.\" "
+          ],
+          "x": 7.5,
+          "y": 2.2,
+          "w": 5.0,
+          "h": 2.8,
+          "style": {
+            "fontSize": 19,
+            "color": "#1E293B"
+          },
+          "animation": {
+            "effect": "slide-up",
+            "build": 2,
+            "durationMs": 400
+          }
+        },
+        {
+          "id": "s07-timer",
+          "label": "计时提示",
+          "type": "text",
+          "text": "⏱️ You have 1 minute — GO!",
+          "x": 3.5,
+          "y": 5.8,
+          "w": 6.0,
+          "h": 0.5,
+          "style": {
+            "fontSize": 20,
+            "bold": true,
+            "color": "#EF4444"
+          }
+        }
+      ]
+    },
+    {
+      "id": "slide-08",
+      "label": "课堂总结 Summary",
+      "type": "title-bullets",
+      "layoutVariant": "evidence-split",
+      "components": [
+        {
+          "id": "s08-bg",
+          "label": "背景",
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 13.333,
+          "h": 7.5,
+          "style": {
+            "fill": "#1E3A5F",
+            "opacity": 1
+          }
+        },
+        {
+          "id": "s08-title",
+          "label": "总结标题",
+          "role": "title-primary",
+          "type": "title",
+          "text": "🎯 Today We Learned 今日所学",
+          "x": 0.9,
+          "y": 0.5,
+          "w": 11.0,
+          "h": 0.7,
+          "style": {
+            "fontSize": 28,
+            "bold": true,
+            "color": "#F59E0B"
+          }
+        },
+        {
+          "id": "s08-divider",
+          "label": "分隔线",
+          "type": "divider",
+          "x": 0.9,
+          "y": 1.3,
+          "w": 11.0,
+          "h": 0.05,
+          "style": {
+            "color": "#F59E0B"
+          }
+        },
+        {
+          "id": "s08-bullets",
+          "label": "总结要点",
+          "type": "bullet-list",
+          "items": [
+            "✅ May = the fifth month / June = the sixth month",
+            "✅ Holidays: Labour Day, Mother's Day, Children's Day, Father's Day",
+            "✅ Key words: celebrate, gift, perform, love",
+            "✅ Sentence: \"_____ is the _____ month of the year.\""
+          ],
+          "x": 0.9,
+          "y": 1.6,
+          "w": 11.0,
+          "h": 3.0,
+          "style": {
+            "fontSize": 21,
+            "color": "#E2E8F0"
+          }
+        },
+        {
+          "id": "s08-homework-label",
+          "label": "作业标签",
+          "type": "text",
+          "text": "Homework",
+          "x": 0.9,
+          "y": 5.0,
+          "w": 1.6,
+          "h": 0.4,
+          "style": {
+            "fontSize": 14,
+            "color": "#1E3A5F",
+            "fill": "#F59E0B"
+          }
+        },
+        {
+          "id": "s08-homework",
+          "label": "课后作业",
+          "type": "bullet-list",
+          "items": [
+            "📝 Copy: May, June, Mother's Day, Father's Day, Children's Day",
+            "🗣️ Practice: Read the text 3 times aloud",
+            "🌟 Challenge: Write 2 sentences using today's patterns"
+          ],
+          "x": 2.7,
+          "y": 4.9,
+          "w": 9.5,
+          "h": 1.8,
+          "style": {
+            "fontSize": 17,
+            "color": "#94A3B8"
+          }
+        },
+        {
+          "id": "s08-goodbye",
+          "label": "结束语",
+          "type": "quote-block",
+          "text": "Great job today! See you next class! 🎉",
+          "x": 2.5,
+          "y": 6.5,
+          "w": 8.0,
+          "h": 0.6,
+          "style": {
+            "fontSize": 20,
+            "color": "#F59E0B"
+          }
+        }
+      ]
+    }
+  ]
+}

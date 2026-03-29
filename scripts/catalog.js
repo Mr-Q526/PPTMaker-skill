@@ -140,7 +140,7 @@ function buildBriefMarkdown({ title, template, archetype }) {
     .map((section) => `## ${section}\n- `)
     .join("\n\n");
 
-  return `# ${title}\n\n- Archetype: ${archetype.label} (${archetype.id})\n- Template: ${template.label} (${template.id})\n- Theme: ${template.theme}\n\n${sectionLines}\n`;
+  return `# ${title}\n\n- 场景结构：${archetype.label} (${archetype.id})\n- 模板：${template.label} (${template.id})\n- 主题：${template.theme}\n\n${sectionLines}\n`;
 }
 
 module.exports = {

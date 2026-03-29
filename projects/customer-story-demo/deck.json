@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "客户案例介绍",
+    "theme": "business-clean",
+    "ratio": "16:9",
+    "mode": "editable",
+    "template": "business-briefing",
+    "archetype": "customer-story"
+  },
+  "slides": [
+    {
+      "id": "slide-01",
+      "label": "封面",
+      "type": "cover",
+      "components": [
+        {
+          "id": "s01-title",
+          "label": "封面标题",
+          "type": "title",
+          "text": "客户案例介绍",
+          "x": 0.9,
+          "y": 0.9,
+          "w": 6.2,
+          "h": 0.8,
+          "style": {
+            "fontSize": 30,
+            "bold": true
+          }
+        },
+        {
+          "id": "s01-subtitle",
+          "label": "封面副标题",
+          "type": "subtitle",
+          "text": "适合客户案例复盘、售前演示和项目展示",
+          "x": 0.95,
+          "y": 1.8,
+          "w": 6.4,
+          "h": 0.45,
+          "style": {
+            "fontSize": 16,
+            "color": "#475569"
+          }
+        }
+      ],
+      "layoutVariant": "hero-left"
+    },
+    {
+      "id": "slide-02",
+      "label": "核心内容",
+      "type": "title-bullets",
+      "components": [
+        {
+          "id": "s02-title",
+          "label": "核心内容标题",
+          "type": "title",
+          "text": "核心内容",
+          "x": 0.9,
+          "y": 0.72,
+          "w": 5.6,
+          "h": 0.6,
+          "style": {
+            "fontSize": 24,
+            "bold": true
+          }
+        },
+        {
+          "id": "s02-bullets",
+          "label": "核心内容列表",
+          "type": "bullet-list",
+          "items": [
+            "要点 1",
+            "要点 2",
+            "要点 3"
+          ],
+          "x": 0.95,
+          "y": 1.8,
+          "w": 5.3,
+          "h": 3.2,
+          "style": {
+            "fontSize": 18
+          }
+        }
+      ],
+      "layoutVariant": "evidence-split"
+    },
+    {
+      "id": "slide-03",
+      "label": "案例与结尾",
+      "type": "quote",
+      "components": [
+        {
+          "id": "s03-title",
+          "label": "案例与结尾标题",
+          "type": "title",
+          "text": "案例与结尾",
+          "x": 0.9,
+          "y": 0.72,
+          "w": 5.8,
+          "h": 0.6,
+          "style": {
+            "fontSize": 24,
+            "bold": true
+          }
+        },
+        {
+          "id": "s03-quote",
+          "label": "总结金句",
+          "type": "quote-block",
+          "text": "把这个场景最重要的一句话放在这里。",
+          "x": 1,
+          "y": 2.05,
+          "w": 10,
+          "h": 1.5,
+          "style": {
+            "fontSize": 24
+          }
+        }
+      ],
+      "layoutVariant": "pull-quote"
+    }
+  ]
+}

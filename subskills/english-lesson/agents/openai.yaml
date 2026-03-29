@@ -1,0 +1,8 @@
+interface:
+  display_name: "英语课堂讲解"
+  short_description: "面向英语课堂讲解场景的结构化 PPT 子 skill。"
+  brand_color: "#0F4C81"
+  default_prompt: "Use $ppt-english-lesson to create a structured PPT for 英语课堂讲解."
+
+policy:
+  allow_implicit_invocation: true
