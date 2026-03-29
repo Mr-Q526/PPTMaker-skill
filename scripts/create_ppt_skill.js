@@ -11,9 +11,21 @@ description: ${description}
 
 # ${displayName}
 
-这个子 skill 用于 ${displayName} 场景，建议与主技能 \`ppt-maker\` 配合使用。
+这个子 skill 用于 ${displayName} 场景，默认复用 \`ppt-maker\` 的结构化 deck、预览和导出流程。
 
-## 推荐创建方式
+## 何时使用
+
+- 用户要做 ${displayName}
+- 该场景的结构相对固定，适合先按 archetype 起稿
+- 需要在统一模板下做后续自然语言修改
+
+## 默认选择
+
+- archetype：\`${archetypeId}\`
+- template：优先 \`business-briefing\`
+- 推荐页数：\`4-6 页\`
+
+## 推荐起稿命令
 
 在 \`/Users/minruiqing/MyProjects/My skills/ppt-maker\` 下运行：
 
@@ -21,23 +33,24 @@ description: ${description}
 node scripts/init_project.js ${archetypeId}-demo "${displayName} Demo" --template business-briefing --archetype ${archetypeId}
 \`\`\`
 
-## 适用场景
+## 输入时优先补齐的信息
 
-- 当用户要做 ${displayName}
-- 当内容结构比较固定，适合先用特定大纲起稿
-- 当希望默认使用该场景的页面顺序、标题方式和版式语言
+- 目标听众
+- 核心问题或展示目标
+- 必须出现的案例、数据或素材
+- 希望呈现的风格与重点
 
-## 默认建议
+## 输出要求
 
-- 先用对应 archetype 创建项目
-- 再根据内容替换 \`brief.md\` 和 \`deck.json\`
-- 视觉模板优先从 \`business-briefing\`、\`launch-stage\`、\`profile-editorial\` 中选择
+- 每页只保留一个重点
+- 标题优先写成结论或记忆点
+- 视觉上优先用现有页型和组件实现，不依赖未支持的复杂特效
 
-## 内容提醒
+## 维护提醒
 
-- 保持每页只讲一个重点
-- 需要强视觉时优先补封面图和案例图
-- 如需新增风格模板或页型变体，请回到主技能 \`ppt-maker\` 更新 catalog
+- 如果该场景需要更专门的大纲，请同步更新 \`references/outline.md\`
+- 如果该场景的 starter deck 不够贴合，请同步更新对应 archetype
+- 如果需要新增风格模板或页型变体，请回到主技能 \`ppt-maker\` 更新 catalog
 `;
 }
 
@@ -46,7 +59,7 @@ function createOpenAiYaml({ displayName, skillName, brandColor }) {
   display_name: "${displayName}"
   short_description: "面向${displayName}场景的结构化 PPT 子 skill。"
   brand_color: "${brandColor}"
-  default_prompt: "Use $${skillName} to create a structured PPT for ${displayName}."
+  default_prompt: "Use $${skillName} to create a 4-6 page structured PPT for ${displayName} with a clear audience, core message, and closing."
 
 policy:
   allow_implicit_invocation: true
@@ -56,20 +69,23 @@ policy:
 function createReference({ displayName, scenario }) {
   return `# ${displayName} 参考结构
 
-## 目标
-- ${scenario}
+1. 封面
+   - 标题、对象、场景一句话定义
 
-## 推荐大纲
-- 封面
-- 背景/身份定义
-- 关键亮点
-- 代表案例或作品
-- 结尾/下一步
+2. 背景 / 问题
+   - 为什么要讲这个主题，听众需要知道什么
+
+3. 核心内容
+   - 2 到 4 个重点信息或一个关键案例
+
+4. 结尾 / 下一步
+   - 总结句、行动建议或合作方式
 
 ## 提示
+
+- ${scenario}
 - 优先让每页有明确标题和结论
-- 需要图片的页面请明确配图类型
-- 如果内容偏叙事，优先选人物风或发布会风模板
+- 如果需要图片，请明确配图类型或截图来源
 `;
 }
 
@@ -88,6 +104,7 @@ function createArchetype({ archetypeId, displayName, scenario }) {
           id: "slide-01",
           label: "封面",
           type: "cover",
+          layoutVariant: "hero-left",
           components: [
             {
               id: "s01-title",
@@ -116,19 +133,31 @@ function createArchetype({ archetypeId, displayName, scenario }) {
                 fontSize: 16,
                 color: "#475569"
               }
+            },
+            {
+              id: "s01-image",
+              label: "封面配图",
+              type: "image",
+              src: "../../assets/preview/placeholder-graphic.svg",
+              fit: "contain",
+              x: 7.75,
+              y: 1.05,
+              w: 4.1,
+              h: 3.9
             }
           ]
         },
         {
           id: "slide-02",
-          label: "核心内容",
+          label: "背景与问题",
           type: "title-bullets",
+          layoutVariant: "evidence-split",
           components: [
             {
               id: "s02-title",
-              label: "核心内容标题",
+              label: "背景标题",
               type: "title",
-              text: "核心内容",
+              text: "背景与问题",
               x: 0.9,
               y: 0.72,
               w: 5.6,
@@ -140,9 +169,9 @@ function createArchetype({ archetypeId, displayName, scenario }) {
             },
             {
               id: "s02-bullets",
-              label: "核心内容列表",
+              label: "背景列表",
               type: "bullet-list",
-              items: ["要点 1", "要点 2", "要点 3"],
+              items: ["背景是什么", "为什么重要", "这一页要回答什么问题"],
               x: 0.95,
               y: 1.8,
               w: 5.3,
@@ -150,19 +179,34 @@ function createArchetype({ archetypeId, displayName, scenario }) {
               style: {
                 fontSize: 18
               }
+            },
+            {
+              id: "s02-text",
+              label: "背景补充",
+              type: "text",
+              text: "这里放一条补充说明、数据或案例场景。",
+              x: 6.95,
+              y: 1.85,
+              w: 4.25,
+              h: 1.4,
+              style: {
+                fontSize: 18,
+                color: "#334155"
+              }
             }
           ]
         },
         {
           id: "slide-03",
-          label: "案例与结尾",
-          type: "quote",
+          label: "核心内容",
+          type: "image-text",
+          layoutVariant: "media-right-focus",
           components: [
             {
               id: "s03-title",
-              label: "案例与结尾标题",
+              label: "核心内容标题",
               type: "title",
-              text: "案例与结尾",
+              text: "核心内容",
               x: 0.9,
               y: 0.72,
               w: 5.8,
@@ -173,7 +217,53 @@ function createArchetype({ archetypeId, displayName, scenario }) {
               }
             },
             {
-              id: "s03-quote",
+              id: "s03-text",
+              label: "核心内容说明",
+              type: "bullet-list",
+              items: ["要点 1", "要点 2", "要点 3"],
+              x: 0.95,
+              y: 1.85,
+              w: 5.15,
+              h: 3.2,
+              style: {
+                fontSize: 18
+              }
+            },
+            {
+              id: "s03-image",
+              label: "内容配图",
+              type: "image",
+              src: "../../assets/preview/placeholder-graphic.svg",
+              fit: "contain",
+              x: 7.0,
+              y: 1.55,
+              w: 4.2,
+              h: 3.75
+            }
+          ]
+        },
+        {
+          id: "slide-04",
+          label: "结尾",
+          type: "quote",
+          layoutVariant: "pull-quote",
+          components: [
+            {
+              id: "s04-title",
+              label: "结尾标题",
+              type: "title",
+              text: "结尾与下一步",
+              x: 0.9,
+              y: 0.72,
+              w: 5.8,
+              h: 0.6,
+              style: {
+                fontSize: 24,
+                bold: true
+              }
+            },
+            {
+              id: "s04-quote",
               label: "总结金句",
               type: "quote-block",
               text: "把这个场景最重要的一句话放在这里。",

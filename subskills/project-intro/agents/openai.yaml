@@ -2,7 +2,7 @@ interface:
   display_name: "PPT 项目介绍"
   short_description: "面向项目介绍和方案汇报场景的结构化 PPT 子 skill。"
   brand_color: "#1E4D8F"
-  default_prompt: "Use $ppt-project-intro to create a structured PPT for my project introduction."
+  default_prompt: "Use $ppt-project-intro to create a 5-7 page project deck with background, goals, solution structure, milestones, and next-step ask."
 
 policy:
   allow_implicit_invocation: true

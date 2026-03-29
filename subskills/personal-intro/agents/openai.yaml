@@ -2,7 +2,7 @@ interface:
   display_name: "PPT 个人介绍"
   short_description: "面向个人介绍和作品集场景的结构化 PPT 子 skill。"
   brand_color: "#A35B45"
-  default_prompt: "Use $ppt-personal-intro to create a structured PPT for my personal introduction."
+  default_prompt: "Use $ppt-personal-intro to create a 4-6 page personal intro deck with identity, journey, representative work, and a memorable closing."
 
 policy:
   allow_implicit_invocation: true

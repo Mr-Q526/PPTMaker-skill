@@ -1,8 +1,8 @@
 interface:
   display_name: "客户案例介绍"
-  short_description: "面向客户案例介绍场景的结构化 PPT 子 skill。"
-  brand_color: "#0F4C81"
-  default_prompt: "Use $ppt-customer-story to create a structured PPT for 客户案例介绍."
+  short_description: "面向客户案例和售前证明的商业案例 PPT 子 skill。"
+  brand_color: "#0F766E"
+  default_prompt: "Use $ppt-customer-story to create a 5-6 page customer case deck with challenge, solution, results, and testimonial."
 
 policy:
   allow_implicit_invocation: true

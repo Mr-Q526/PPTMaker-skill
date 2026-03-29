@@ -1,13 +1,13 @@
 {
-  "id": "customer-story",
-  "label": "客户案例介绍",
-  "description": "适合售前证明、客户案例和项目成效展示，强调客户场景、问题、方案、结果和客户评价。",
+  "id": "course-presentation",
+  "label": "小组作业 / 期末 Pre",
+  "description": "适合课程展示、案例分析和读书报告，强调破冰、理论背景、案例剖析、团队观点和课堂讨论。",
   "briefSections": [
-    "客户行业与业务场景",
-    "原始问题或业务痛点",
-    "我们提供的方案与落地方式",
-    "结果数据与收益",
-    "客户评价或后续合作"
+    "课程名称与汇报主题",
+    "必须讲清的理论或背景",
+    "核心案例或阅读材料",
+    "小组自己的观点或洞察",
+    "讨论问题与互动设计"
   ],
   "starterDeck": {
     "meta": {
@@ -16,19 +16,19 @@
     "slides": [
       {
         "id": "slide-01",
-        "label": "封面",
+        "label": "破冰封面",
         "type": "cover",
-        "layoutVariant": "hero-left",
+        "layoutVariant": "hero-right",
         "components": [
           {
             "id": "s01-title",
-            "label": "案例标题",
+            "label": "主标题",
             "type": "title",
-            "text": "{{title}}",
+            "text": "为什么这个问题值得我们花 10 分钟讲清楚？",
             "x": 0.9,
-            "y": 0.95,
-            "w": 6.4,
-            "h": 0.8,
+            "y": 1.0,
+            "w": 6.2,
+            "h": 1.0,
             "style": {
               "fontSize": 30,
               "bold": true
@@ -36,45 +36,45 @@
           },
           {
             "id": "s01-subtitle",
-            "label": "案例结论",
+            "label": "成员与课程信息",
             "type": "subtitle",
-            "text": "用一句话讲清这个客户案例最重要的结果或价值。",
+            "text": "{{title}} · 小组成员 / 课程名称 / 日期",
             "x": 0.95,
-            "y": 1.85,
-            "w": 6.1,
-            "h": 0.5,
+            "y": 2.35,
+            "w": 5.8,
+            "h": 0.45,
             "style": {
-              "fontSize": 17,
+              "fontSize": 16,
               "color": "#475569"
             }
           },
           {
             "id": "s01-image",
-            "label": "客户场景图",
+            "label": "封面图片",
             "type": "image",
             "src": "../../assets/preview/placeholder-graphic.svg",
             "fit": "cover",
-            "x": 7.7,
+            "x": 7.55,
             "y": 1.0,
-            "w": 4.35,
-            "h": 4.15
+            "w": 4.5,
+            "h": 4.4
           }
         ]
       },
       {
         "id": "slide-02",
-        "label": "客户与挑战",
+        "label": "背景与理论",
         "type": "title-bullets",
         "layoutVariant": "evidence-split",
         "components": [
           {
             "id": "s02-title",
-            "label": "挑战标题",
+            "label": "背景标题",
             "type": "title",
-            "text": "客户是谁，原来卡在哪里",
+            "text": "问题背景：我们为什么选这个题",
             "x": 0.9,
             "y": 0.75,
-            "w": 6.4,
+            "w": 6.8,
             "h": 0.7,
             "style": {
               "fontSize": 26,
@@ -83,16 +83,16 @@
           },
           {
             "id": "s02-bullets",
-            "label": "客户挑战",
+            "label": "背景要点",
             "type": "bullet-list",
             "items": [
-              "客户背景：行业、规模、核心业务场景",
-              "原始痛点：效率、成本、增长或流程问题",
-              "这次项目想达成的目标"
+              "现象或问题：现实里发生了什么",
+              "前置概念：听众需要知道什么",
+              "理论抓手：一句话解释这次分析的视角"
             ],
             "x": 0.95,
             "y": 1.85,
-            "w": 5.3,
+            "w": 5.4,
             "h": 3.2,
             "style": {
               "fontSize": 18
@@ -100,13 +100,13 @@
           },
           {
             "id": "s02-text",
-            "label": "补充背景",
+            "label": "背景补充",
             "type": "text",
-            "text": "这里可以补一句客户原始状态，例如“人工流程多、响应慢、跨部门协同困难”。",
+            "text": "这里可以补一个数据、新闻片段或读书背景，帮助同学快速进入主题。",
             "x": 6.95,
             "y": 1.9,
             "w": 4.2,
-            "h": 1.55,
+            "h": 1.6,
             "style": {
               "fontSize": 18,
               "color": "#334155"
@@ -116,18 +116,18 @@
       },
       {
         "id": "slide-03",
-        "label": "方案落地",
+        "label": "核心案例",
         "type": "image-text",
         "layoutVariant": "media-right-focus",
         "components": [
           {
             "id": "s03-title",
-            "label": "方案标题",
+            "label": "案例标题",
             "type": "title",
-            "text": "我们如何把方案真正落到客户现场",
+            "text": "核心案例：发生了什么，为什么重要",
             "x": 0.9,
             "y": 0.75,
-            "w": 7.2,
+            "w": 7.0,
             "h": 0.7,
             "style": {
               "fontSize": 26,
@@ -135,17 +135,17 @@
             }
           },
           {
-            "id": "s03-bullets",
-            "label": "方案要点",
+            "id": "s03-text",
+            "label": "案例说明",
             "type": "bullet-list",
             "items": [
-              "方案结构：做了哪些关键动作",
-              "落地路径：试点、部署、培训或集成",
-              "客户侧配合：哪些环节一起完成"
+              "案例简介：对象、背景、情境",
+              "关键冲突：最值得分析的转折点",
+              "关键材料：书中观点、影片情节或案例决策"
             ],
             "x": 0.95,
             "y": 1.85,
-            "w": 5.15,
+            "w": 5.2,
             "h": 3.3,
             "style": {
               "fontSize": 18
@@ -153,31 +153,31 @@
           },
           {
             "id": "s03-image",
-            "label": "方案截图",
+            "label": "案例图片",
             "type": "image",
             "src": "../../assets/preview/placeholder-graphic.svg",
-            "fit": "contain",
-            "x": 7.05,
+            "fit": "cover",
+            "x": 7.0,
             "y": 1.55,
-            "w": 4.2,
-            "h": 3.8
+            "w": 4.35,
+            "h": 3.85
           }
         ]
       },
       {
         "id": "slide-04",
-        "label": "结果数据",
-        "type": "chart",
-        "layoutVariant": "headline-data",
+        "label": "小组观点",
+        "type": "comparison",
+        "layoutVariant": "card-contrast",
         "components": [
           {
             "id": "s04-title",
-            "label": "结果标题",
+            "label": "观点标题",
             "type": "title",
-            "text": "结果不是“更好”，而是“看得见地变好”",
+            "text": "我们的观点：材料之外，真正值得带走的是什么",
             "x": 0.9,
             "y": 0.75,
-            "w": 8.0,
+            "w": 8.2,
             "h": 0.7,
             "style": {
               "fontSize": 26,
@@ -185,61 +185,53 @@
             }
           },
           {
-            "id": "s04-chart",
-            "label": "结果图表",
-            "type": "chart",
-            "kind": "bar",
-            "text": "示例结果图，请替换为真实业务指标",
-            "categories": [
-              "上线前",
-              "试点期",
-              "稳定期"
-            ],
-            "series": [
-              {
-                "name": "核心指标",
-                "values": [
-                  10,
-                  28,
-                  46
-                ]
-              }
+            "id": "s04-left",
+            "label": "正面观点",
+            "type": "bullet-list",
+            "items": [
+              "观点 1：我们的核心 insight",
+              "观点 2：对现实或行业的启发"
             ],
             "x": 0.95,
-            "y": 1.55,
-            "w": 6.3,
-            "h": 4.0
+            "y": 1.9,
+            "w": 5.0,
+            "h": 3.0,
+            "style": {
+              "fontSize": 18
+            }
           },
           {
-            "id": "s04-text",
-            "label": "结果说明",
-            "type": "text",
-            "text": "在这里补 2 到 3 条业务变化：效率提升、响应缩短、转化提高或满意度变化。",
-            "x": 7.7,
+            "id": "s04-right",
+            "label": "争议与反思",
+            "type": "bullet-list",
+            "items": [
+              "争议点：哪些地方还有不同理解",
+              "反思点：如果重做一次会怎样分析"
+            ],
+            "x": 6.85,
             "y": 1.9,
-            "w": 3.7,
-            "h": 2.2,
+            "w": 4.35,
+            "h": 3.0,
             "style": {
-              "fontSize": 17,
-              "color": "#334155"
+              "fontSize": 18
             }
           }
         ]
       },
       {
         "id": "slide-05",
-        "label": "客户评价",
+        "label": "讨论与Q&A",
         "type": "quote",
         "layoutVariant": "pull-quote",
         "components": [
           {
             "id": "s05-title",
-            "label": "客户评价标题",
+            "label": "讨论标题",
             "type": "title",
-            "text": "客户怎么评价这次合作",
+            "text": "留给课堂的最后一个问题",
             "x": 0.9,
             "y": 0.85,
-            "w": 6.2,
+            "w": 6.6,
             "h": 0.7,
             "style": {
               "fontSize": 26,
@@ -248,25 +240,25 @@
           },
           {
             "id": "s05-quote",
-            "label": "客户原话",
+            "label": "讨论问题",
             "type": "quote-block",
-            "text": "这里放客户原话、关键背书或一句总结性评价。",
+            "text": "如果你站在案例中的关键角色位置，你会做出同样的选择吗？",
             "x": 1.0,
-            "y": 2.05,
-            "w": 10.1,
-            "h": 1.6,
+            "y": 2.0,
+            "w": 10.3,
+            "h": 1.7,
             "style": {
               "fontSize": 24
             }
           },
           {
             "id": "s05-text",
-            "label": "复用价值",
+            "label": "结束说明",
             "type": "text",
-            "text": "最后补一句这类方案对其他客户的可复制价值或下一步合作机会。",
+            "text": "这里可以补一句通俗总结，或留给老师和同学的开放性问题。",
             "x": 1.05,
-            "y": 4.2,
-            "w": 9.4,
+            "y": 4.15,
+            "w": 9.6,
             "h": 0.9,
             "style": {
               "fontSize": 18,

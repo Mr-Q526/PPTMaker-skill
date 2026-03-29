@@ -1,0 +1,393 @@
+{
+  "id": "thesis-defense",
+  "label": "毕业答辩 / 学术汇报",
+  "description": "适合毕业答辩和学术汇报，强调研究问题、方法设计、数据结果、结论与答辩表达。",
+  "briefSections": [
+    "论文题目与答辩人信息",
+    "研究背景与核心问题",
+    "文献缺口与研究定位",
+    "方法设计与实验流程",
+    "结果数据与核心结论",
+    "不足与未来工作"
+  ],
+  "starterDeck": {
+    "meta": {
+      "mode": "editable"
+    },
+    "slides": [
+      {
+        "id": "slide-01",
+        "label": "封面",
+        "type": "cover",
+        "layoutVariant": "hero-left",
+        "components": [
+          {
+            "id": "s01-title",
+            "label": "课题标题",
+            "type": "title",
+            "text": "{{title}}",
+            "x": 0.9,
+            "y": 1.05,
+            "w": 7.2,
+            "h": 0.95,
+            "style": {
+              "fontSize": 30,
+              "bold": true
+            }
+          },
+          {
+            "id": "s01-subtitle",
+            "label": "答辩人信息",
+            "type": "subtitle",
+            "text": "答辩人 / 指导教师 / 专业 / 日期",
+            "x": 0.95,
+            "y": 2.2,
+            "w": 6.3,
+            "h": 0.45,
+            "style": {
+              "fontSize": 16,
+              "color": "#475569"
+            }
+          },
+          {
+            "id": "s01-text",
+            "label": "研究定位",
+            "type": "text",
+            "text": "在这里用一句话描述研究对象、核心问题或论文价值。",
+            "x": 0.95,
+            "y": 3.0,
+            "w": 5.8,
+            "h": 1.1,
+            "style": {
+              "fontSize": 18,
+              "color": "#334155"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-02",
+        "label": "研究背景",
+        "type": "title-bullets",
+        "layoutVariant": "evidence-split",
+        "components": [
+          {
+            "id": "s02-title",
+            "label": "背景标题",
+            "type": "title",
+            "text": "研究背景与核心问题",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 6.4,
+            "h": 0.7,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s02-bullets",
+            "label": "背景要点",
+            "type": "bullet-list",
+            "items": [
+              "研究背景：行业或学术现状",
+              "问题定义：现有工作尚未解决什么",
+              "研究意义：为什么这件事值得做"
+            ],
+            "x": 0.95,
+            "y": 1.85,
+            "w": 5.4,
+            "h": 3.1,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s02-text",
+            "label": "背景补充",
+            "type": "text",
+            "text": "这里适合补一条关键统计数据、研究缺口或问题场景描述。",
+            "x": 6.95,
+            "y": 1.9,
+            "w": 4.0,
+            "h": 1.5,
+            "style": {
+              "fontSize": 17,
+              "color": "#334155"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-03",
+        "label": "文献定位",
+        "type": "comparison",
+        "layoutVariant": "card-contrast",
+        "components": [
+          {
+            "id": "s03-title",
+            "label": "文献标题",
+            "type": "title",
+            "text": "文献现状与本文切入点",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 6.6,
+            "h": 0.7,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s03-left",
+            "label": "现有研究",
+            "type": "bullet-list",
+            "items": [
+              "主流做法 1",
+              "主流做法 2",
+              "现有方法的共性局限"
+            ],
+            "x": 0.95,
+            "y": 1.9,
+            "w": 5.0,
+            "h": 3.0,
+            "style": {
+              "fontSize": 17
+            }
+          },
+          {
+            "id": "s03-right",
+            "label": "本文切入点",
+            "type": "bullet-list",
+            "items": [
+              "本文研究对象或方法与前人的差异",
+              "本文试图解决的问题",
+              "本文预期贡献"
+            ],
+            "x": 6.85,
+            "y": 1.9,
+            "w": 4.35,
+            "h": 3.0,
+            "style": {
+              "fontSize": 17
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-04",
+        "label": "方法设计",
+        "type": "two-column",
+        "layoutVariant": "narrative-split",
+        "components": [
+          {
+            "id": "s04-title",
+            "label": "方法标题",
+            "type": "title",
+            "text": "方法与实验设计",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 6.0,
+            "h": 0.7,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s04-left",
+            "label": "方法说明",
+            "type": "bullet-list",
+            "items": [
+              "理论框架或模型",
+              "实验流程与变量设置",
+              "样本、数据来源与评价指标"
+            ],
+            "x": 0.95,
+            "y": 1.85,
+            "w": 5.15,
+            "h": 3.15,
+            "style": {
+              "fontSize": 17
+            }
+          },
+          {
+            "id": "s04-right-shape",
+            "label": "流程图占位",
+            "type": "shape",
+            "shape": "roundedRect",
+            "x": 7.0,
+            "y": 1.8,
+            "w": 4.15,
+            "h": 3.3,
+            "style": {
+              "backgroundColor": "#E2E8F0",
+              "borderColor": "#94A3B8"
+            }
+          },
+          {
+            "id": "s04-right-text",
+            "label": "流程图说明",
+            "type": "text",
+            "text": "这里放流程图、实验架构图或方法示意图。",
+            "x": 7.25,
+            "y": 3.0,
+            "w": 3.6,
+            "h": 0.9,
+            "style": {
+              "fontSize": 16,
+              "textAlign": "center",
+              "color": "#475569"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-05",
+        "label": "结果分析",
+        "type": "chart",
+        "layoutVariant": "headline-data",
+        "components": [
+          {
+            "id": "s05-title",
+            "label": "结果标题",
+            "type": "title",
+            "text": "结果与分析",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 4.5,
+            "h": 0.7,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s05-chart",
+            "label": "结果图表",
+            "type": "chart",
+            "kind": "bar",
+            "text": "示例结果图，请替换为真实实验数据",
+            "categories": [
+              "Baseline",
+              "Method A",
+              "Our Method"
+            ],
+            "series": [
+              {
+                "name": "Performance",
+                "values": [
+                  62,
+                  71,
+                  83
+                ]
+              }
+            ],
+            "x": 0.95,
+            "y": 1.55,
+            "w": 6.4,
+            "h": 4.0
+          },
+          {
+            "id": "s05-text",
+            "label": "结果说明",
+            "type": "text",
+            "text": "这里解释最重要的 2 到 3 个发现：指标变化、显著性、现象解释或失败点。",
+            "x": 7.8,
+            "y": 1.95,
+            "w": 3.35,
+            "h": 2.2,
+            "style": {
+              "fontSize": 17,
+              "color": "#334155"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-06",
+        "label": "结论",
+        "type": "quote",
+        "layoutVariant": "pull-quote",
+        "components": [
+          {
+            "id": "s06-title",
+            "label": "结论标题",
+            "type": "title",
+            "text": "结论、贡献与不足",
+            "x": 0.9,
+            "y": 0.85,
+            "w": 6.2,
+            "h": 0.7,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s06-quote",
+            "label": "核心结论",
+            "type": "quote-block",
+            "text": "这里放最重要的一句话结论，再补 2 到 3 条研究贡献或限制。",
+            "x": 1.0,
+            "y": 2.0,
+            "w": 10.0,
+            "h": 1.6,
+            "style": {
+              "fontSize": 24
+            }
+          },
+          {
+            "id": "s06-text",
+            "label": "不足与展望",
+            "type": "text",
+            "text": "这里补研究不足、边界条件和未来工作。",
+            "x": 1.05,
+            "y": 4.15,
+            "w": 9.2,
+            "h": 0.9,
+            "style": {
+              "fontSize": 18,
+              "color": "#475569"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-07",
+        "label": "Q&A",
+        "type": "quote",
+        "layoutVariant": "signature-quote",
+        "components": [
+          {
+            "id": "s07-title",
+            "label": "Q&A 标题",
+            "type": "title",
+            "text": "Q&A",
+            "x": 0.9,
+            "y": 1.2,
+            "w": 3.5,
+            "h": 0.7,
+            "style": {
+              "fontSize": 28,
+              "bold": true
+            }
+          },
+          {
+            "id": "s07-quote",
+            "label": "结束语",
+            "type": "quote-block",
+            "text": "感谢各位老师的聆听，欢迎批评指正。",
+            "x": 1.0,
+            "y": 2.25,
+            "w": 9.8,
+            "h": 1.4,
+            "style": {
+              "fontSize": 24
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

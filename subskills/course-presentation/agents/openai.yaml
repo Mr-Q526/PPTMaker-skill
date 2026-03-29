@@ -1,0 +1,8 @@
+interface:
+  display_name: "小组作业 / 期末 Pre"
+  short_description: "面向课程展示和读书报告的课堂 PPT 子 skill。"
+  brand_color: "#8B5CF6"
+  default_prompt: "Use $ppt-course-presentation to turn my topic into a 5-7 page class presentation with hook, theory, case, insight, and discussion."
+
+policy:
+  allow_implicit_invocation: true

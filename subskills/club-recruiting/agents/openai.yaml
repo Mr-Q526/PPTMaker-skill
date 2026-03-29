@@ -1,0 +1,8 @@
+interface:
+  display_name: "社团招新 / 活动策划"
+  short_description: "面向社团招新和活动路演的高能 PPT 子 skill。"
+  brand_color: "#F97316"
+  default_prompt: "Use $ppt-club-recruiting to create a 4-6 page recruiting deck with slogan, highlights, member benefits, roadmap, and QR CTA."
+
+policy:
+  allow_implicit_invocation: true

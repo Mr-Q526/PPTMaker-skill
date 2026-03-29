@@ -1,13 +1,13 @@
 {
   "id": "english-lesson",
   "label": "英语课堂讲解",
-  "description": "适合英语教学课堂讲解、课文导入、词汇练习和互动活动的演示文稿生成",
+  "description": "适合英语课堂课件制作，覆盖导入、课文学习、词汇、句型、练习和总结。",
   "briefSections": [
-    "一句话目标",
-    "受众",
-    "重点内容",
-    "素材清单",
-    "希望呈现的风格"
+    "年级、教材版本、Lesson 编号",
+    "本节课教学目标",
+    "课文、词汇和句型内容",
+    "课堂练习或互动题",
+    "作业或课后延伸"
   ],
   "starterDeck": {
     "meta": {
@@ -18,14 +18,15 @@
         "id": "slide-01",
         "label": "封面",
         "type": "cover",
+        "layoutVariant": "hero-left",
         "components": [
           {
             "id": "s01-title",
-            "label": "封面标题",
+            "label": "课题标题",
             "type": "title",
             "text": "{{title}}",
             "x": 0.9,
-            "y": 0.9,
+            "y": 0.95,
             "w": 6.2,
             "h": 0.8,
             "style": {
@@ -35,13 +36,124 @@
           },
           {
             "id": "s01-subtitle",
-            "label": "封面副标题",
+            "label": "课时信息",
             "type": "subtitle",
-            "text": "适合英语教学课堂讲解、课文导入、词汇练习和互动活动的演示文稿生成",
+            "text": "Grade / Lesson / Class Time",
             "x": 0.95,
-            "y": 1.8,
-            "w": 6.4,
+            "y": 1.85,
+            "w": 5.8,
             "h": 0.45,
+            "style": {
+              "fontSize": 16,
+              "color": "#475569"
+            }
+          },
+          {
+            "id": "s01-image",
+            "label": "封面装饰图",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "contain",
+            "x": 7.75,
+            "y": 1.05,
+            "w": 4.2,
+            "h": 4.0
+          }
+        ]
+      },
+      {
+        "id": "slide-02",
+        "label": "Warm-up",
+        "type": "image-text",
+        "layoutVariant": "caption-photo",
+        "components": [
+          {
+            "id": "s02-title",
+            "label": "暖场标题",
+            "type": "title",
+            "text": "Warm-up",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 4.5,
+            "h": 0.6,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s02-text",
+            "label": "暖场问题",
+            "type": "bullet-list",
+            "items": [
+              "Ask a simple question related to today's topic.",
+              "Use one picture or one situation to get attention.",
+              "Keep this page short and easy to answer."
+            ],
+            "x": 0.95,
+            "y": 1.85,
+            "w": 5.1,
+            "h": 3.1,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s02-image",
+            "label": "暖场图片",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "cover",
+            "x": 7.0,
+            "y": 1.55,
+            "w": 4.25,
+            "h": 3.8
+          }
+        ]
+      },
+      {
+        "id": "slide-03",
+        "label": "Text Learning",
+        "type": "two-column",
+        "layoutVariant": "narrative-split",
+        "components": [
+          {
+            "id": "s03-title",
+            "label": "课文标题",
+            "type": "title",
+            "text": "Text Learning",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 5.4,
+            "h": 0.6,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s03-left",
+            "label": "课文内容",
+            "type": "text",
+            "text": "Put the key dialogue or text here. Highlight the sentence students must read aloud.",
+            "x": 0.95,
+            "y": 1.85,
+            "w": 5.2,
+            "h": 3.1,
+            "style": {
+              "fontSize": 20,
+              "color": "#111827"
+            }
+          },
+          {
+            "id": "s03-right",
+            "label": "中文辅助",
+            "type": "text",
+            "text": "这里补中文提示、重点解释或阅读任务，不要写成长篇讲义。",
+            "x": 6.95,
+            "y": 1.85,
+            "w": 4.2,
+            "h": 2.2,
             "style": {
               "fontSize": 16,
               "color": "#475569"
@@ -50,73 +162,211 @@
         ]
       },
       {
-        "id": "slide-02",
-        "label": "核心内容",
-        "type": "title-bullets",
+        "id": "slide-04",
+        "label": "Key Vocabulary",
+        "type": "table",
+        "layoutVariant": "executive-grid",
         "components": [
           {
-            "id": "s02-title",
-            "label": "核心内容标题",
+            "id": "s04-title",
+            "label": "词汇标题",
             "type": "title",
-            "text": "核心内容",
+            "text": "Key Vocabulary",
             "x": 0.9,
-            "y": 0.72,
-            "w": 5.6,
+            "y": 0.75,
+            "w": 5.4,
             "h": 0.6,
             "style": {
-              "fontSize": 24,
+              "fontSize": 26,
               "bold": true
             }
           },
           {
-            "id": "s02-bullets",
-            "label": "核心内容列表",
-            "type": "bullet-list",
-            "items": [
-              "要点 1",
-              "要点 2",
-              "要点 3"
+            "id": "s04-table",
+            "label": "词汇表格",
+            "type": "table",
+            "rows": [
+              [
+                "Word",
+                "Meaning",
+                "Example"
+              ],
+              [
+                "holiday",
+                "节日",
+                "We love holidays."
+              ],
+              [
+                "month",
+                "月份",
+                "There are twelve months."
+              ],
+              [
+                "festival",
+                "节庆",
+                "Spring Festival is in winter."
+              ]
             ],
             "x": 0.95,
-            "y": 1.8,
-            "w": 5.3,
-            "h": 3.2,
+            "y": 1.6,
+            "w": 10.6,
+            "h": 3.8,
             "style": {
-              "fontSize": 18
+              "fontSize": 16
             }
           }
         ]
       },
       {
-        "id": "slide-03",
-        "label": "案例与结尾",
+        "id": "slide-05",
+        "label": "Key Sentences",
         "type": "quote",
+        "layoutVariant": "pull-quote",
         "components": [
           {
-            "id": "s03-title",
-            "label": "案例与结尾标题",
+            "id": "s05-title",
+            "label": "句型标题",
             "type": "title",
-            "text": "案例与结尾",
+            "text": "Key Sentences",
             "x": 0.9,
-            "y": 0.72,
-            "w": 5.8,
+            "y": 0.8,
+            "w": 5.4,
             "h": 0.6,
             "style": {
-              "fontSize": 24,
+              "fontSize": 26,
               "bold": true
             }
           },
           {
-            "id": "s03-quote",
-            "label": "总结金句",
+            "id": "s05-quote",
+            "label": "核心句型",
             "type": "quote-block",
-            "text": "把这个场景最重要的一句话放在这里。",
-            "x": 1,
-            "y": 2.05,
-            "w": 10,
+            "text": "What month is your birthday in?",
+            "x": 1.0,
+            "y": 1.9,
+            "w": 10.0,
+            "h": 1.4,
+            "style": {
+              "fontSize": 28
+            }
+          },
+          {
+            "id": "s05-text",
+            "label": "句型练习说明",
+            "type": "text",
+            "text": "在这里补替换词、例句或学生两人一组操练方式。",
+            "x": 1.05,
+            "y": 4.0,
+            "w": 9.4,
+            "h": 0.9,
+            "style": {
+              "fontSize": 18,
+              "color": "#475569"
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-06",
+        "label": "Practice",
+        "type": "comparison",
+        "layoutVariant": "card-contrast",
+        "components": [
+          {
+            "id": "s06-title",
+            "label": "练习标题",
+            "type": "title",
+            "text": "Practice",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 4.5,
+            "h": 0.6,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s06-left",
+            "label": "学生任务",
+            "type": "bullet-list",
+            "items": [
+              "Task 1: Ask and answer in pairs.",
+              "Task 2: Fill in the blanks.",
+              "Task 3: Say one complete sentence aloud."
+            ],
+            "x": 0.95,
+            "y": 1.85,
+            "w": 5.0,
+            "h": 3.0,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s06-right",
+            "label": "教师提示",
+            "type": "bullet-list",
+            "items": [
+              "Give one example first.",
+              "Invite 2 to 3 students to answer.",
+              "纠错时只抓本课重点句型。"
+            ],
+            "x": 6.9,
+            "y": 1.85,
+            "w": 4.2,
+            "h": 3.0,
+            "style": {
+              "fontSize": 17
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-07",
+        "label": "Summary",
+        "type": "quote",
+        "layoutVariant": "signature-quote",
+        "components": [
+          {
+            "id": "s07-title",
+            "label": "总结标题",
+            "type": "title",
+            "text": "Summary & Homework",
+            "x": 0.9,
+            "y": 0.85,
+            "w": 6.0,
+            "h": 0.6,
+            "style": {
+              "fontSize": 26,
+              "bold": true
+            }
+          },
+          {
+            "id": "s07-quote",
+            "label": "总结句",
+            "type": "quote-block",
+            "text": "Today we learned new words, one key sentence, and how to use them in class.",
+            "x": 1.0,
+            "y": 2.0,
+            "w": 10.1,
             "h": 1.5,
             "style": {
               "fontSize": 24
+            }
+          },
+          {
+            "id": "s07-text",
+            "label": "作业",
+            "type": "text",
+            "text": "这里补课后作业或一句延伸任务。",
+            "x": 1.05,
+            "y": 4.2,
+            "w": 8.5,
+            "h": 0.8,
+            "style": {
+              "fontSize": 18,
+              "color": "#475569"
             }
           }
         ]

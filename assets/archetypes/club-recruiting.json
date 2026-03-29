@@ -1,0 +1,256 @@
+{
+  "id": "club-recruiting",
+  "label": "社团招新 / 活动策划路演",
+  "description": "适合社团招新、活动宣讲和校园拉新，强调口号、活动高光、加入收益和行动号召。",
+  "briefSections": [
+    "社团名称与一句口号",
+    "最有代表性的活动或荣誉",
+    "加入后能得到的三类收益",
+    "新学期重点活动安排",
+    "二维码、群号和报名方式"
+  ],
+  "starterDeck": {
+    "meta": {
+      "mode": "editable"
+    },
+    "slides": [
+      {
+        "id": "slide-01",
+        "label": "开场",
+        "type": "cover",
+        "layoutVariant": "hero-right",
+        "components": [
+          {
+            "id": "s01-title",
+            "label": "主口号",
+            "type": "title",
+            "text": "加入我们，大学别过得太普通。",
+            "x": 0.9,
+            "y": 1.15,
+            "w": 6.2,
+            "h": 1.1,
+            "style": {
+              "fontSize": 34,
+              "bold": true
+            }
+          },
+          {
+            "id": "s01-subtitle",
+            "label": "社团名称",
+            "type": "subtitle",
+            "text": "{{title}} · 秋季纳新",
+            "x": 0.95,
+            "y": 2.45,
+            "w": 5.8,
+            "h": 0.5,
+            "style": {
+              "fontSize": 18,
+              "color": "#94A3B8"
+            }
+          },
+          {
+            "id": "s01-text",
+            "label": "氛围标签",
+            "type": "text",
+            "text": "热爱、行动力、舞台感。这里放 3 个最想让新生记住的关键词。",
+            "x": 0.95,
+            "y": 3.2,
+            "w": 5.5,
+            "h": 1.3,
+            "style": {
+              "fontSize": 18,
+              "color": "#E2E8F0"
+            }
+          },
+          {
+            "id": "s01-image",
+            "label": "封面活动图",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "cover",
+            "x": 7.6,
+            "y": 1.0,
+            "w": 4.6,
+            "h": 4.4
+          }
+        ]
+      },
+      {
+        "id": "slide-02",
+        "label": "高光活动",
+        "type": "image-text",
+        "layoutVariant": "immersive-figure",
+        "components": [
+          {
+            "id": "s02-title",
+            "label": "高光标题",
+            "type": "title",
+            "text": "去年最炸的一次活动",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 6.5,
+            "h": 0.7,
+            "style": {
+              "fontSize": 28,
+              "bold": true
+            }
+          },
+          {
+            "id": "s02-text",
+            "label": "高光说明",
+            "type": "bullet-list",
+            "items": [
+              "活动亮点：发生了什么，为什么大家记住了它",
+              "影响力数字：参与人数、奖项、合作资源",
+              "一句总结：为什么只有你们社团能做成这件事"
+            ],
+            "x": 0.95,
+            "y": 1.85,
+            "w": 5.2,
+            "h": 3.4,
+            "style": {
+              "fontSize": 18
+            }
+          },
+          {
+            "id": "s02-image",
+            "label": "高光活动图片",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "cover",
+            "x": 7.0,
+            "y": 1.55,
+            "w": 4.35,
+            "h": 3.75
+          }
+        ]
+      },
+      {
+        "id": "slide-03",
+        "label": "加入收益",
+        "type": "title-bullets",
+        "layoutVariant": "headline-plus-visual",
+        "components": [
+          {
+            "id": "s03-title",
+            "label": "收益标题",
+            "type": "title",
+            "text": "加入之后，你能得到什么？",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 7.0,
+            "h": 0.75,
+            "style": {
+              "fontSize": 28,
+              "bold": true
+            }
+          },
+          {
+            "id": "s03-bullets",
+            "label": "收益列表",
+            "type": "bullet-list",
+            "items": [
+              "硬技能：能学会的具体能力",
+              "人脉圈：能认识什么样的人",
+              "舞台感：你会拥有什么样的经历和回忆"
+            ],
+            "x": 0.95,
+            "y": 1.9,
+            "w": 6.4,
+            "h": 3.2,
+            "style": {
+              "fontSize": 20
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-04",
+        "label": "活动计划",
+        "type": "timeline",
+        "layoutVariant": "step-cards",
+        "components": [
+          {
+            "id": "s04-title",
+            "label": "计划标题",
+            "type": "title",
+            "text": "新学期，我们准备这样炸场",
+            "x": 0.9,
+            "y": 0.75,
+            "w": 7.2,
+            "h": 0.7,
+            "style": {
+              "fontSize": 28,
+              "bold": true
+            }
+          },
+          {
+            "id": "s04-timeline",
+            "label": "活动时间线",
+            "type": "bullet-list",
+            "items": [
+              "9 月：迎新活动与内部破冰",
+              "10 月：主力项目启动",
+              "11 月：大型校级活动或赛事",
+              "12 月：成果展示与年度收尾"
+            ],
+            "x": 1.0,
+            "y": 1.8,
+            "w": 10.2,
+            "h": 3.5,
+            "style": {
+              "fontSize": 18
+            }
+          }
+        ]
+      },
+      {
+        "id": "slide-05",
+        "label": "行动号召",
+        "type": "image-text",
+        "layoutVariant": "media-right-focus",
+        "components": [
+          {
+            "id": "s05-title",
+            "label": "行动标题",
+            "type": "title",
+            "text": "现在扫码，下一次高光现场就有你",
+            "x": 0.9,
+            "y": 0.9,
+            "w": 6.4,
+            "h": 0.9,
+            "style": {
+              "fontSize": 30,
+              "bold": true
+            }
+          },
+          {
+            "id": "s05-text",
+            "label": "行动说明",
+            "type": "text",
+            "text": "这里放群号、截止时间、报名方式和一句最强行动号召。",
+            "x": 0.95,
+            "y": 2.2,
+            "w": 5.3,
+            "h": 1.6,
+            "style": {
+              "fontSize": 18,
+              "color": "#E2E8F0"
+            }
+          },
+          {
+            "id": "s05-image",
+            "label": "二维码",
+            "type": "image",
+            "src": "../../assets/preview/placeholder-graphic.svg",
+            "fit": "contain",
+            "x": 7.35,
+            "y": 1.55,
+            "w": 3.8,
+            "h": 3.8
+          }
+        ]
+      }
+    ]
+  }
+}

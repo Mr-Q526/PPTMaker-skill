@@ -1,0 +1,8 @@
+interface:
+  display_name: "毕业答辩 / 学术汇报"
+  short_description: "面向毕业答辩和学术汇报的严谨型 PPT 子 skill。"
+  brand_color: "#334155"
+  default_prompt: "Use $ppt-thesis-defense to turn my thesis into a 6-8 page defense deck focused on problem, method, data, results, and conclusion."
+
+policy:
+  allow_implicit_invocation: true
